@@ -12,30 +12,21 @@
 
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { Type } from "@sinclair/typebox";
-import {
-	type Anchor,
-	type BoundTarget,
-	createDecisionLedger,
-	createDraftStore,
-	createFindingStore,
-	createFixQueue,
-	createVisitLog,
-	type DiffModel,
-	type DiffSide,
-	type DraftStore,
-	describeSubject,
-	isReactableRefusal,
-	publishAcross,
-	type Reaction,
-	type ReviewDraft,
-	type ReviewTarget,
-	resumeDraft,
-	type StackPublishEntry,
-	subjectOf,
-	type Thread,
-	type Verdict,
-} from "../../../lib/review/index.js";
-import { count, displayPath } from "../../../lib/ui/index.js";
+import { type Anchor } from "../../../lib/review/anchor.js";
+import { type ReviewTarget } from "../../../lib/review/change.js";
+import { type Reaction, type Thread, type Verdict } from "../../../lib/review/conversation.js";
+import { createDecisionLedger } from "../../../lib/review/decided.js";
+import { type DiffModel, type DiffSide } from "../../../lib/review/diff.js";
+import { publishAcross, type StackPublishEntry } from "../../../lib/review/draft/fanout.js";
+import { type ReviewDraft, resumeDraft } from "../../../lib/review/draft/handle.js";
+import { createDraftStore, type DraftStore } from "../../../lib/review/draft/store.js";
+import { type BoundTarget } from "../../../lib/review/engine.js";
+import { createFindingStore } from "../../../lib/review/finding.js";
+import { createFixQueue, describeSubject, subjectOf } from "../../../lib/review/fix.js";
+import { isReactableRefusal } from "../../../lib/review/reactable.js";
+import { createVisitLog } from "../../../lib/review/revisited.js";
+import { count } from "../../../lib/ui/count.js";
+import { displayPath } from "../../../lib/ui/path.js";
 import {
 	decisionDir,
 	draftDir,

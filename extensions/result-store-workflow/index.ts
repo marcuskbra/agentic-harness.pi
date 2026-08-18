@@ -16,16 +16,9 @@
 
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { Type } from "@sinclair/typebox";
-import {
-	cleanupSessionResults,
-	DEFAULT_MAX_MATCHES,
-	isPidAlive,
-	offerQueryTool,
-	openSessionStore,
-	queryStored,
-	RESULT_ROOT,
-	reapAbandonedResults,
-} from "../../lib/result/index.js";
+import { offerQueryTool } from "../../lib/result/follow.js";
+import { cleanupSessionResults, isPidAlive, openSessionStore, RESULT_ROOT, reapAbandonedResults } from "../../lib/result/location.js";
+import { DEFAULT_MAX_MATCHES, queryStored } from "../../lib/result/query.js";
 import { renderQueryCall, renderQueryResult } from "./render.js";
 
 /** What the tool reports alongside its text, for the renderers. */

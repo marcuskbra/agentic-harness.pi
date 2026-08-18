@@ -19,7 +19,7 @@
  * single uniform "... and N more" hint.
  */
 
-import type { QuestKind, QuestStatus } from "../../lib/quest/index.js";
+import type { QuestKind, QuestStatus } from "../../lib/quest/types.js";
 import { count } from "../../lib/ui/count.js";
 
 const KIND_GLYPHS: Record<QuestKind, string> = {

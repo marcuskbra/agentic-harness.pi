@@ -13,7 +13,8 @@
  */
 
 import { CLOCK_FLOOR_MS } from "../../lib/clock/index.js";
-import type { AskLimit, AskStop, Participant } from "../../lib/review/index.js";
+import type { AskLimit, AskStop } from "../../lib/review/ask/council.js";
+import type { Participant } from "../../lib/review/ask/identity.js";
 import { DEFAULT_RUN_PI_TIMEOUT_MS } from "../../lib/subagent/runpi/spawn.js";
 import { WRAP_UP_TIMEOUT_MS } from "../../lib/subagent/subagent.js";
 

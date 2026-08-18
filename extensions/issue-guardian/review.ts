@@ -22,7 +22,7 @@ import {
 } from "../../lib/internal/guardian/review-entity.js";
 import { runSectionGate } from "../../lib/internal/guardian/section-gate.js";
 import { runTitleGate } from "../../lib/internal/guardian/title-gate.js";
-import { ISSUE_SECTIONS } from "../../lib/sections/index.js";
+import { ISSUE_SECTIONS } from "../../lib/sections/sanctioned.js";
 import {
 	type IssueCommand,
 	isIssueCommand,

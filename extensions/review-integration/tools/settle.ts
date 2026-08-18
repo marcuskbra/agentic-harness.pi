@@ -11,11 +11,9 @@
  * reported rather than smoothed over.
  */
 
-import type {
-	ChangeRef,
-	ConversationFacet,
-	Thread,
-} from "../../../lib/review/index.js";
+import type { ChangeRef } from "../../../lib/review/change.js";
+import type { Thread } from "../../../lib/review/conversation.js";
+import type { ConversationFacet } from "../../../lib/review/provider.js";
 
 /** The settling half of a conversation, which is all this file needs. */
 type Settler = Pick<ConversationFacet, "resolve" | "unresolve">;

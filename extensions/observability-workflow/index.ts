@@ -25,14 +25,9 @@ import type {
 } from "@earendil-works/pi-coding-agent";
 import { Type } from "@sinclair/typebox";
 import { packageStateDir } from "../../lib/internal/package-state-dir.js";
-import {
-	openRunStore,
-	type RunRecord,
-	type RunRollup,
-	type RunStore,
-	type RunSummary,
-	registerRunRecorder,
-} from "../../lib/observability/index.js";
+import { registerRunRecorder } from "../../lib/observability/recorder.js";
+import { openRunStore, type RunStore } from "../../lib/observability/store.js";
+import { type RunRecord, type RunRollup, type RunSummary } from "../../lib/observability/types.js";
 
 const STATUS_KEY = "observability:summary";
 

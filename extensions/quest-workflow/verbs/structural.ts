@@ -23,7 +23,7 @@ import {
 	lastStructuralOp,
 	recordStructuralOp,
 } from "../../../lib/internal/quest/structural-journal.js";
-import type { QuestFrontMatter } from "../../../lib/quest/index.js";
+import type { QuestFrontMatter } from "../../../lib/quest/types.js";
 import { count, verb } from "../../../lib/ui/count.js";
 import {
 	sealQuestDocuments,

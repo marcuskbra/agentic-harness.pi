@@ -31,16 +31,17 @@ import { dataDir } from "../../lib/internal/paths.js";
 import { discoverQuests } from "../../lib/internal/quest/discovery.js";
 import { currentInstanceId } from "../../lib/internal/quest/process-liveness.js";
 import { formatRelativeAge } from "../../lib/internal/quest/session-liveness.js";
-import {
-	registerBuiltinHandleTypes,
-	registerBuiltinPersonResolvers,
-} from "../../lib/people/index.js";
-import { registerBuiltinUrlFetchers } from "../../lib/quest/index.js";
-import { registerBuiltinRefTypes } from "../../lib/refs/index.js";
-import { boundedByDetails, openSessionStore } from "../../lib/result/index.js";
-import { registerBuiltinTerminalDrivers } from "../../lib/terminal/index.js";
-import { registerBuiltinTreeProviders } from "../../lib/tree/index.js";
-import { count, drawInto, firstText } from "../../lib/ui/index.js";
+import { registerBuiltinHandleTypes } from "../../lib/people/register.js";
+import { registerBuiltinPersonResolvers } from "../../lib/people/resolve.js";
+import { registerBuiltinUrlFetchers } from "../../lib/internal/quest/url-fetchers.js";
+import { registerBuiltinRefTypes } from "../../lib/refs/register.js";
+import { boundedByDetails } from "../../lib/result/details.js";
+import { openSessionStore } from "../../lib/result/location.js";
+import { registerBuiltinTerminalDrivers } from "../../lib/terminal/register.js";
+import { registerBuiltinTreeProviders } from "../../lib/tree/register.js";
+import { count } from "../../lib/ui/count.js";
+import { drawInto } from "../../lib/ui/tool-call.js";
+import { firstText } from "../../lib/ui/tool-result.js";
 import { QUEST_ACTIONS } from "./actions.js";
 import { answerTreeClaims } from "./claims.js";
 import {

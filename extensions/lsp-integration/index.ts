@@ -21,22 +21,12 @@ import type {
 	ExtensionAPI,
 } from "@earendil-works/pi-coding-agent";
 import { Type } from "@sinclair/typebox";
-import {
-	type CodeAction,
-	createStandaloneBackend,
-	type Diagnostic,
-	type HoverInfo,
-	type LspLocation,
-	MissingServerError,
-	registerLspBackend,
-	resolveLspBackend,
-	type StandaloneBackend,
-	type SymbolInfo,
-	toBackendEntry,
-	unregisterLspBackend,
-	type WorkspaceEdit,
-} from "../../lib/lsp/index.js";
-import { citeListing, openSessionStore } from "../../lib/result/index.js";
+import { toBackendEntry } from "../../lib/lsp/external.js";
+import { registerLspBackend, resolveLspBackend, unregisterLspBackend } from "../../lib/lsp/registry.js";
+import { createStandaloneBackend, MissingServerError, type StandaloneBackend } from "../../lib/lsp/standalone/backend.js";
+import { type CodeAction, type Diagnostic, type HoverInfo, type LspLocation, type SymbolInfo, type WorkspaceEdit } from "../../lib/lsp/types.js";
+import { citeListing } from "../../lib/result/listing.js";
+import { openSessionStore } from "../../lib/result/location.js";
 
 const STANDALONE = "standalone";
 /** The standalone backend registers here; a paired editor sits below it. */

@@ -19,7 +19,7 @@ import { StringEnum } from "@earendil-works/pi-ai";
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { truncateToWidth } from "@earendil-works/pi-tui";
 import { Type } from "@sinclair/typebox";
-import { drawInto } from "../../lib/ui/index.js";
+import { drawInto } from "../../lib/ui/tool-call.js";
 import { persist, restore, updateScoreboard } from "./lifecycle.js";
 import { transition } from "./machine.js";
 import { formatTransitionReply } from "./reply.js";

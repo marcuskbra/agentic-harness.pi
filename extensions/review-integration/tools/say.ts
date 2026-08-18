@@ -20,7 +20,7 @@
 
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { Type } from "@sinclair/typebox";
-import type { BoundTarget } from "../../../lib/review/index.js";
+import type { BoundTarget } from "../../../lib/review/engine.js";
 import { batchRefusal, runBatch, type SayItem } from "./batch.js";
 import {
 	type Answer,

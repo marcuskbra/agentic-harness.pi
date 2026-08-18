@@ -7,11 +7,9 @@
  * assignment in separate commands after creation.
  */
 
-import {
-	findFlag,
-	type SimpleCommand,
-	tokenize,
-} from "../../lib/command/index.js";
+import { findFlag } from "../../lib/command/flags.js";
+import { tokenize } from "../../lib/command/tokenize.js";
+import { type SimpleCommand } from "../../lib/command/types.js";
 import { GH_BODY_SPEC } from "../../lib/internal/github/command-spec.js";
 import {
 	extractBodyFilePath,

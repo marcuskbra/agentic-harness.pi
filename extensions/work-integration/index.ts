@@ -15,16 +15,9 @@
  */
 
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
-import {
-	clearTreeProviders,
-	listTreeProviders,
-	registerTreeProvider,
-	type TreeProvider,
-	WORK_READY,
-	WORK_REGISTER_TREE_PROVIDER,
-	WORK_REQUEST,
-	type WorkApi,
-} from "../../lib/work/index.js";
+import { type TreeProvider } from "../../lib/work/broker.js";
+import { WORK_READY, WORK_REGISTER_TREE_PROVIDER, WORK_REQUEST, type WorkApi } from "../../lib/work/events.js";
+import { clearTreeProviders, listTreeProviders, registerTreeProvider } from "../../lib/work/register.js";
 import {
 	forgetTreeBroker,
 	registerBuiltinTreeProviders,

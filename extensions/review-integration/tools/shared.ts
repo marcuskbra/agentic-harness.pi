@@ -11,21 +11,15 @@ import type {
 	Theme,
 } from "@earendil-works/pi-coding-agent";
 import { Text } from "@earendil-works/pi-tui";
-import {
-	type BoundTarget,
-	type ChangeRef,
-	changeInPlay,
-	chooseChange,
-	explainFailure,
-	type FailureContext,
-	findReactable,
-	type Reactable,
-	type ReactableRefusal,
-	reactables,
-	repoElsewhere,
-	type Thread,
-} from "../../../lib/review/index.js";
-import { firstText, renderToolCall } from "../../../lib/ui/index.js";
+import { changeInPlay, chooseChange } from "../../../lib/review/attach.js";
+import { type ChangeRef } from "../../../lib/review/change.js";
+import { type Thread } from "../../../lib/review/conversation.js";
+import { repoElsewhere } from "../../../lib/review/elsewhere.js";
+import { type BoundTarget } from "../../../lib/review/engine.js";
+import { explainFailure, type FailureContext } from "../../../lib/review/failed.js";
+import { findReactable, type Reactable, type ReactableRefusal, reactables } from "../../../lib/review/reactable.js";
+import { renderToolCall } from "../../../lib/ui/tool-call.js";
+import { firstText } from "../../../lib/ui/tool-result.js";
 import { attachments, reviewEngine } from "../engine.js";
 import type { GateRefusal } from "../gate.js";
 import { GLYPH } from "../render.js";

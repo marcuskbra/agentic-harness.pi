@@ -29,20 +29,11 @@ import {
 	lastOpenAt,
 	type SessionRecord,
 } from "../../lib/internal/quest/session-registry.js";
-import {
-	getResolutionFallback,
-	type Identity,
-	resolveIdentity,
-} from "../../lib/people/index.js";
-import {
-	type CastEntry,
-	extractCast,
-	extractMentions,
-	extractSectionParagraph,
-	type QuestFrontMatter,
-	type QuestSession,
-} from "../../lib/quest/index.js";
-import { parseRef, urlForRef, whyRefHasNoUrl } from "../../lib/refs/index.js";
+import { getResolutionFallback, resolveIdentity } from "../../lib/people/resolve.js";
+import { type Identity } from "../../lib/people/types.js";
+import { extractCast, extractMentions, extractSectionParagraph } from "../../lib/internal/quest/quest-doc.js";
+import { type CastEntry, type QuestFrontMatter, type QuestSession } from "../../lib/quest/types.js";
+import { parseRef, urlForRef, whyRefHasNoUrl } from "../../lib/refs/lookup.js";
 import { buildSessionSnapshot } from "./liveness.js";
 import type { RowCast, RowDocument, RowJourney } from "./render-rows.js";
 import {

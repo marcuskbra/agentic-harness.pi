@@ -13,15 +13,12 @@
 
 import { basename } from "node:path";
 import type { ExtensionContext } from "@earendil-works/pi-coding-agent";
-import type {
-	Anchor,
-	BoundTarget,
-	ChangeRef,
-	ConversationFacet,
-	Reaction,
-	Thread,
-} from "../../../lib/review/index.js";
-import { isReactableRefusal } from "../../../lib/review/index.js";
+import type { Anchor } from "../../../lib/review/anchor.js";
+import type { ChangeRef } from "../../../lib/review/change.js";
+import type { Reaction, Thread } from "../../../lib/review/conversation.js";
+import type { BoundTarget } from "../../../lib/review/engine.js";
+import type { ConversationFacet } from "../../../lib/review/provider.js";
+import { isReactableRefusal } from "../../../lib/review/reactable.js";
 import { confirmBatch, type GateItem, REDIRECT_QUOTE_WIDTH } from "../gate.js";
 import {
 	anchorLabel,

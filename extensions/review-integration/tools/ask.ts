@@ -33,58 +33,30 @@ import {
 	loadPackageConfig,
 } from "../../../lib/internal/config/loader.js";
 import { packageConfigPath } from "../../../lib/internal/paths.js";
-import {
-	type AnswerContext,
-	type AnswerLine,
-	type AskAnswer,
-	type AskContext,
-	type AskRound,
-	type AskRun,
-	auditPrompt,
-	type ChangeRef,
-	type CouncilDeps,
-	type Critique,
-	collectRound,
-	councilPrompt,
-	createFindingStore,
-	createIdentityLedger,
-	createRunStore,
-	critiquePrompt,
-	type DiffModel,
-	describeAnchor,
-	describeRun,
-	type Finding,
-	judgePrompt,
-	overrideRoster,
-	type Participant,
-	type ParticipantOverride,
-	parseRoster,
-	type Roster,
-	type RunStore,
-	retryCannotResettle,
-	roundAnswer,
-	runAudit,
-	runCouncil,
-	runCritique,
-	runJudge,
-	runStackCouncil,
-	stackPrompt,
-	startCouncil,
-	substituteOutcome,
-	type Thread,
-	type ThreadAudit,
-} from "../../../lib/review/index.js";
-import type { ReviewerThinkingLevel } from "../../../lib/subagent/index.js";
-import {
-	getParentPiInstall,
-	JOURNAL_PACK_PATH,
-	RESUME_SUFFIX,
-	ReviewerArtifactsStore,
-	runReviewer,
-	startReviewer,
-	summarizeStreamActivity,
-	WRAP_UP_SUFFIX,
-} from "../../../lib/subagent/index.js";
+import { describeAnchor } from "../../../lib/review/anchor.js";
+import { type AnswerContext, type AnswerLine, describeRun, roundAnswer } from "../../../lib/review/ask/answer.js";
+import { runAudit, type ThreadAudit } from "../../../lib/review/ask/audit.js";
+import { collectRound } from "../../../lib/review/ask/collect.js";
+import { type AskAnswer, type AskContext, type CouncilDeps, runCouncil } from "../../../lib/review/ask/council.js";
+import { type Critique, runCritique } from "../../../lib/review/ask/critique.js";
+import { createIdentityLedger, type Participant } from "../../../lib/review/ask/identity.js";
+import { runJudge } from "../../../lib/review/ask/judge.js";
+import { auditPrompt, councilPrompt, critiquePrompt, judgePrompt, stackPrompt } from "../../../lib/review/ask/prompt.js";
+import { overrideRoster, type ParticipantOverride, parseRoster, type Roster } from "../../../lib/review/ask/roster.js";
+import { type AskRound, type AskRun, retryCannotResettle, substituteOutcome } from "../../../lib/review/ask/run.js";
+import { runStackCouncil } from "../../../lib/review/ask/stack-round.js";
+import { startCouncil } from "../../../lib/review/ask/start.js";
+import { createRunStore, type RunStore } from "../../../lib/review/ask/store.js";
+import { type ChangeRef } from "../../../lib/review/change.js";
+import { type Thread } from "../../../lib/review/conversation.js";
+import { type DiffModel } from "../../../lib/review/diff.js";
+import { createFindingStore, type Finding } from "../../../lib/review/finding.js";
+import type { ReviewerThinkingLevel } from "../../../lib/subagent/subagent.js";
+import { summarizeStreamActivity } from "../../../lib/subagent/activity.js";
+import { ReviewerArtifactsStore } from "../../../lib/subagent/artifacts.js";
+import { getParentPiInstall } from "../../../lib/subagent/install.js";
+import { runReviewer, startReviewer, WRAP_UP_SUFFIX } from "../../../lib/subagent/subagent.js";
+import { JOURNAL_PACK_PATH, RESUME_SUFFIX } from "../../../lib/subagent/index.js";
 import { fromScript } from "../../../lib/subagent/runpi/fresh.js";
 import { THINKING_LEVELS } from "../../../lib/thinking/index.js";
 import { count } from "../../../lib/ui/count.js";

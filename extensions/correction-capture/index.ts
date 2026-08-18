@@ -19,22 +19,15 @@ import { mkdirSync } from "node:fs";
 import { join } from "node:path";
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { Type } from "@sinclair/typebox";
-import { runSideCompletion } from "../../lib/completion/index.js";
-import {
-	condenseTranscript,
-	distillSystemPrompt,
-	distillUserPrompt,
-	openRuleStore,
-	parseRules,
-	type RuleStore,
-	renderRulesBlock,
-	type Turn,
-} from "../../lib/governance/index.js";
+import { runSideCompletion } from "../../lib/completion/side.js";
+import { condenseTranscript, distillSystemPrompt, distillUserPrompt, parseRules, type Turn } from "../../lib/governance/distill.js";
+import { renderRulesBlock } from "../../lib/governance/render.js";
+import { openRuleStore, type RuleStore } from "../../lib/governance/store.js";
 import { dataDir } from "../../lib/internal/paths.js";
 import { entriesToTurns } from "../../lib/internal/transcript.js";
-import { registerPromptContributor } from "../../lib/prompt/index.js";
+import { registerPromptContributor } from "../../lib/prompt/coordinator.js";
 import { count } from "../../lib/ui/count.js";
-import { drawInto } from "../../lib/ui/index.js";
+import { drawInto } from "../../lib/ui/tool-call.js";
 
 /** Captured lessons sit just below the enforced conventions. */
 const GOVERNANCE_ORDER = 1;

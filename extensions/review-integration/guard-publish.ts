@@ -16,9 +16,9 @@
  */
 
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
-import { queueRefusal } from "../../lib/review/index.js";
-import type { PublishReview } from "../../lib/work/index.js";
-import { WORK_PUBLISH_CHECK } from "../../lib/work/index.js";
+import { queueRefusal } from "../../lib/review/queue.js";
+import type { PublishReview } from "../../lib/work/objection.js";
+import { WORK_PUBLISH_CHECK } from "../../lib/work/objection.js";
 import { reviewEngine } from "./engine.js";
 
 /**

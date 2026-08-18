@@ -59,22 +59,10 @@ import {
 } from "../../lib/internal/quest/session-liveness.js";
 import { isSealedStatus } from "../../lib/internal/quest/status.js";
 import { getLastEntry } from "../../lib/internal/state.js";
-import {
-	checkboxProgress,
-	type DocumentFrontMatter,
-	type DocumentKind,
-	type DocumentStage,
-	documentFrontMatterProblem,
-	parseDocumentFrontMatter,
-	parseQuestDoc,
-	type QuestAlias,
-	type QuestFrontMatter,
-	type QuestPriority,
-	type QuestSession,
-	type QuestStatus,
-	serializeDocumentFrontMatter,
-} from "../../lib/quest/index.js";
-import { identifyCurrentTerminal } from "../../lib/terminal/index.js";
+import { documentFrontMatterProblem, parseDocumentFrontMatter, serializeDocumentFrontMatter } from "../../lib/internal/quest/frontmatter.js";
+import { checkboxProgress, parseQuestDoc } from "../../lib/internal/quest/quest-doc.js";
+import { type DocumentFrontMatter, type DocumentKind, type DocumentStage, type QuestAlias, type QuestFrontMatter, type QuestPriority, type QuestSession, type QuestStatus } from "../../lib/quest/types.js";
+import { identifyCurrentTerminal } from "../../lib/terminal/resolve.js";
 import type { Stage } from "./machine.js";
 import { sessionNameFor } from "./render.js";
 import type { QuestState } from "./state.js";

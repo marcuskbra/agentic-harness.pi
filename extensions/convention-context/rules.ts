@@ -23,7 +23,7 @@
  * changes it was being asked to make.
  */
 
-import { ISSUE_SECTIONS, PR_SECTIONS } from "../../lib/sections/index.js";
+import { ISSUE_SECTIONS, PR_SECTIONS } from "../../lib/sections/sanctioned.js";
 
 /** Build the resident binding-rules block. */
 export function buildBindingRules(): string {

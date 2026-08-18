@@ -27,12 +27,7 @@ import type {
 	ToolRenderResultOptions,
 } from "@earendil-works/pi-coding-agent";
 import type { Text } from "@earendil-works/pi-tui";
-import {
-	asText,
-	drawInto,
-	type RenderTheme,
-	renderToolCall,
-} from "../../lib/ui/index.js";
+import { asText, drawInto, type RenderTheme, renderToolCall } from "../../lib/ui/tool-call.js";
 import type { BrowserDetails } from "./result.js";
 
 /**

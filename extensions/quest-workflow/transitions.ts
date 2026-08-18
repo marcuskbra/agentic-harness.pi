@@ -19,7 +19,7 @@ import type {
 	ExtensionAPI,
 	ExtensionContext,
 } from "@earendil-works/pi-coding-agent";
-import type { QuestPriority } from "../../lib/quest/index.js";
+import type { QuestPriority } from "../../lib/quest/types.js";
 import { suggestAction } from "./actions.js";
 import type { QuestState } from "./state.js";
 import { aliasAdd, aliasRemove } from "./verbs/alias.js";

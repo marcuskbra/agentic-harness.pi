@@ -23,7 +23,7 @@ import {
 } from "../../lib/internal/guardian/review-entity.js";
 import { runSectionGate } from "../../lib/internal/guardian/section-gate.js";
 import { runTitleGate } from "../../lib/internal/guardian/title-gate.js";
-import { PR_SECTIONS } from "../../lib/sections/index.js";
+import { PR_SECTIONS } from "../../lib/sections/sanctioned.js";
 import { isPrCommand, type PrCommand, parsePrCommand } from "./parse.js";
 
 const PR_SECTION_CONFIG = {

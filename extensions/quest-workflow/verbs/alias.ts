@@ -9,8 +9,8 @@ import {
 	lookupAliasDetail,
 } from "../../../lib/internal/quest/alias-index.js";
 import { discoverQuests } from "../../../lib/internal/quest/discovery.js";
-import type { QuestAlias } from "../../../lib/quest/index.js";
-import { parseRef } from "../../../lib/refs/index.js";
+import type { QuestAlias } from "../../../lib/quest/types.js";
+import { parseRef } from "../../../lib/refs/lookup.js";
 import {
 	addAliasesToLoaded,
 	appendJourneyEntry,

@@ -22,11 +22,8 @@
  * instead, so all of them can be read before the one request is approved.
  */
 
-import type {
-	DiffModel,
-	PlannedOp,
-	PublishPlan,
-} from "../../../lib/review/index.js";
+import type { DiffModel } from "../../../lib/review/diff.js";
+import type { PlannedOp, PublishPlan } from "../../../lib/review/draft/plan.js";
 import type { GateItem, GateView } from "../gate.js";
 import { REDIRECT_QUOTE_WIDTH } from "../gate.js";
 import {

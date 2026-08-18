@@ -17,18 +17,12 @@
 import { join } from "node:path";
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { stateDir } from "../../lib/internal/paths.js";
-import type { Exec } from "../../lib/review/index.js";
-import {
-	createGitTreeProvider,
-	createTreeBroker,
-	createTreeMemory,
-	listTreeProviders,
-	type Objection,
-	type PublishIntent,
-	registerTreeProvider,
-	type TreeBroker,
-	WORK_PUBLISH_CHECK,
-} from "../../lib/work/index.js";
+import type { Exec } from "../../lib/exec/exec.js";
+import { createTreeBroker, type TreeBroker } from "../../lib/work/broker.js";
+import { createTreeMemory } from "../../lib/work/memory.js";
+import { type Objection, type PublishIntent, WORK_PUBLISH_CHECK } from "../../lib/work/objection.js";
+import { createGitTreeProvider } from "../../lib/work/providers/git.js";
+import { listTreeProviders, registerTreeProvider } from "../../lib/work/register.js";
 
 /** Where trees this package cuts are put. */
 export function treeDir(): string {

@@ -25,7 +25,8 @@ import type {
 	ExtensionContext,
 } from "@earendil-works/pi-coding-agent";
 import { Type } from "@sinclair/typebox";
-import { drawInto, firstText } from "../../lib/ui/index.js";
+import { drawInto } from "../../lib/ui/tool-call.js";
+import { firstText } from "../../lib/ui/tool-result.js";
 import { MermaidRenderError, renderMermaid } from "../../lib/web/mermaid.js";
 
 /** The platform command that opens a file in its default app. */

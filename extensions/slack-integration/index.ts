@@ -23,7 +23,7 @@ import { parseSlackUrl } from "../../lib/slack/resolvers/url.js";
 import { displayNameForId } from "../../lib/slack/resolvers/user.js";
 import type { OAuthApp, SlackUser } from "../../lib/slack/types.js";
 import { count } from "../../lib/ui/count.js";
-import { drawInto } from "../../lib/ui/index.js";
+import { drawInto } from "../../lib/ui/tool-call.js";
 import { handleSlackAuthCommand } from "./auth-command.js";
 import { identityContext } from "./context.js";
 import { routeAction } from "./router.js";

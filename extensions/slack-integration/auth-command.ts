@@ -14,7 +14,7 @@ import {
 } from "../../lib/slack/auth/credentials.js";
 import { ensureSetup } from "../../lib/slack/auth/setup-wizard.js";
 import type { OAuthApp } from "../../lib/slack/types.js";
-import { view } from "../../lib/ui/index.js";
+import { view } from "../../lib/ui/panel.js";
 
 /**
  * Handle /slack-auth command.

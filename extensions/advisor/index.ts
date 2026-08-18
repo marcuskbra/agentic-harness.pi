@@ -24,19 +24,13 @@ import type {
 	ExtensionContext,
 } from "@earendil-works/pi-coding-agent";
 import { Type } from "@sinclair/typebox";
-import { runInvestigation } from "../../lib/completion/index.js";
-import {
-	condenseTranscript,
-	openRuleStore,
-	type RuleStore,
-} from "../../lib/governance/index.js";
+import { runInvestigation } from "../../lib/completion/investigate.js";
+import { condenseTranscript } from "../../lib/governance/distill.js";
+import { openRuleStore, type RuleStore } from "../../lib/governance/store.js";
 import { dataDir } from "../../lib/internal/paths.js";
 import { entriesToTurns } from "../../lib/internal/transcript.js";
-import {
-	recordRunEverywhere,
-	runRecordFrom,
-} from "../../lib/observability/index.js";
-import { drawInto } from "../../lib/ui/index.js";
+import { recordRunEverywhere, runRecordFrom } from "../../lib/observability/recorder.js";
+import { drawInto } from "../../lib/ui/tool-call.js";
 import { advisorCharter, reviewPrompt } from "./charter.js";
 import {
 	channelFor,

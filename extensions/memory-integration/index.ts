@@ -24,14 +24,12 @@ import type {
 } from "@earendil-works/pi-coding-agent";
 import { Type } from "@sinclair/typebox";
 import { packageStateDir } from "../../lib/internal/package-state-dir.js";
-import {
-	type Fact,
-	type MemoryStore,
-	openMemoryStore,
-	resolveScope,
-} from "../../lib/memory/index.js";
-import { registerPromptContributor } from "../../lib/prompt/index.js";
-import { citeListing, openSessionStore } from "../../lib/result/index.js";
+import { resolveScope } from "../../lib/memory/scope.js";
+import { openMemoryStore } from "../../lib/memory/store.js";
+import { type Fact, type MemoryStore } from "../../lib/memory/types.js";
+import { registerPromptContributor } from "../../lib/prompt/coordinator.js";
+import { citeListing } from "../../lib/result/listing.js";
+import { openSessionStore } from "../../lib/result/location.js";
 
 /** Memory recall sits just below the conventions in the resident block. */
 const MEMORY_ORDER = 10;

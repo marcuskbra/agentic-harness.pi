@@ -18,22 +18,15 @@
 
 import { readdir, readFile, realpath } from "node:fs/promises";
 import { basename, join, resolve } from "node:path";
-import type {
-	AgentDiscovery,
-	AgentFile,
-	DiffModel,
-	PersonaBinding,
-	RepoGuidance,
-	Roster,
-	RoundGiven,
-} from "../../lib/review/index.js";
-import {
-	bindPersonas,
-	discoverAgents,
-	NAMESPACE,
-	parsePersona,
-	quotable,
-} from "../../lib/review/index.js";
+import type { AgentDiscovery, AgentFile } from "../../lib/review/ask/agents.js";
+import type { PersonaBinding } from "../../lib/review/ask/persona.js";
+import type { RepoGuidance } from "../../lib/review/ask/prompt.js";
+import type { Roster } from "../../lib/review/ask/roster.js";
+import type { RoundGiven } from "../../lib/review/ask/run.js";
+import type { DiffModel } from "../../lib/review/diff.js";
+import { discoverAgents, NAMESPACE } from "../../lib/review/ask/agents.js";
+import { bindPersonas, parsePersona } from "../../lib/review/ask/persona.js";
+import { quotable } from "../../lib/review/ask/prompt.js";
 
 /** How much repo-written text a refusal may repeat, and how often. */
 const MOST_CHARACTERS = 200;

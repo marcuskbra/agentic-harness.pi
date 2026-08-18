@@ -16,7 +16,7 @@
 
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { discoverQuests } from "../../lib/internal/quest/discovery.js";
-import { type TreeClaims, WORK_TREE_CLAIMS } from "../../lib/work/index.js";
+import { type TreeClaims, WORK_TREE_CLAIMS } from "../../lib/work/events.js";
 
 /**
  * Answer the working layer's question about held trees.

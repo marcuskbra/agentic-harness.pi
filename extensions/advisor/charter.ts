@@ -8,7 +8,7 @@
  * captured rules and the new transcript delta.
  */
 
-import type { GovernanceRule } from "../../lib/governance/index.js";
+import type { GovernanceRule } from "../../lib/governance/types.js";
 
 /** The advisor's standing system prompt. */
 export function advisorCharter(): string {

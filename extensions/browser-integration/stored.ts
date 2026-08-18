@@ -14,7 +14,9 @@
  * moved.
  */
 
-import { cite, citeListing, openSessionStore } from "../../lib/result/index.js";
+import { cite } from "../../lib/result/cite.js";
+import { citeListing } from "../../lib/result/listing.js";
+import { openSessionStore } from "../../lib/result/location.js";
 import {
 	type AxNode,
 	type BudgetedOutline,

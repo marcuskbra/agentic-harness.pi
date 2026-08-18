@@ -9,12 +9,8 @@
  */
 
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
-import {
-	orderStack,
-	type ReplayResult,
-	type StackedBranch,
-	type WorkStacks,
-} from "../../../lib/work/index.js";
+import { orderStack, type StackedBranch } from "../../../lib/work/stack.js";
+import { type ReplayResult, type WorkStacks } from "../../../lib/work/stacks.js";
 import { GLYPH } from "../render.js";
 import { type Answer, refuse, say } from "./shared.js";
 

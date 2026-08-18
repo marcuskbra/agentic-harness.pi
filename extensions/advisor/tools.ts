@@ -19,7 +19,7 @@
 import { spawn } from "node:child_process";
 import { readFileSync, statSync } from "node:fs";
 import { resolve, sep } from "node:path";
-import type { LoopTool } from "../../lib/completion/index.js";
+import type { LoopTool } from "../../lib/completion/investigate.js";
 
 /** Cap on characters returned by any one tool call. */
 const MAX_OUTPUT = 4000;

@@ -28,12 +28,8 @@ import {
 	type TUI,
 	truncateToWidth,
 } from "@earendil-works/pi-tui";
-import {
-	type AskProgress,
-	type AskProgressEntry,
-	type AskRound,
-	trackAskProgress,
-} from "../../lib/review/index.js";
+import { type AskProgress, type AskProgressEntry, trackAskProgress } from "../../lib/review/ask/progress.js";
+import { type AskRound } from "../../lib/review/ask/run.js";
 import { AGENT_GLYPH } from "../../lib/ui/agent-glyphs.js";
 
 /**

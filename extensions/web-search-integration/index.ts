@@ -15,7 +15,7 @@
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { Type } from "@sinclair/typebox";
 import { count } from "../../lib/ui/count.js";
-import { drawInto } from "../../lib/ui/index.js";
+import { drawInto } from "../../lib/ui/tool-call.js";
 import { closeBrowser, killBrowserSync } from "../../lib/web/browser.js";
 import {
 	isSetUp,

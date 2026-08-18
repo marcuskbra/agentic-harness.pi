@@ -16,7 +16,7 @@ import {
 	createOAuth2Client,
 	setCredentials,
 } from "../../lib/google/auth/oauth.js";
-import { view } from "../../lib/ui/index.js";
+import { view } from "../../lib/ui/panel.js";
 
 interface OAuthConfig {
 	clientId: string;

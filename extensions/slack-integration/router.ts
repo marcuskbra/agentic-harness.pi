@@ -9,7 +9,7 @@
 
 import { basename } from "node:path";
 import type { ExtensionContext } from "@earendil-works/pi-coding-agent";
-import type { GateDeps } from "../../lib/gate/index.js";
+import type { GateDeps } from "../../lib/gate/deps.js";
 import { getChannelInfo } from "../../lib/slack/api/channels.js";
 import type { SlackClient } from "../../lib/slack/api/client.js";
 import {

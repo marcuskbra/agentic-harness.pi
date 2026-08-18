@@ -17,24 +17,18 @@
 
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { Type } from "@sinclair/typebox";
-import type { Exec } from "../../../lib/exec/index.js";
-import type {
-	AuthoringIntent,
-	BoundTarget,
-	CheckoutFacts,
-	FieldEdit,
-	Proposal,
-	SetEdit,
-} from "../../../lib/review/index.js";
-import {
-	fillProposal,
-	misnamedPeople,
-	offerable,
-	retargetPlan,
-	retargetRoute,
-} from "../../../lib/review/index.js";
-import { count } from "../../../lib/ui/index.js";
-import { createGitRebaser, createGitStacks } from "../../../lib/work/index.js";
+import type { Exec } from "../../../lib/exec/exec.js";
+import type { AuthoringIntent } from "../../../lib/review/authoring.js";
+import type { Proposal } from "../../../lib/review/change.js";
+import type { BoundTarget } from "../../../lib/review/engine.js";
+import type { CheckoutFacts } from "../../../lib/review/propose-from.js";
+import type { FieldEdit, SetEdit } from "../../../lib/review/provider.js";
+import { misnamedPeople, offerable } from "../../../lib/review/authoring.js";
+import { fillProposal } from "../../../lib/review/propose-from.js";
+import { retargetPlan, retargetRoute } from "../../../lib/review/retarget.js";
+import { count } from "../../../lib/ui/count.js";
+import { createGitRebaser } from "../../../lib/work/rebase.js";
+import { createGitStacks } from "../../../lib/work/stacks.js";
 import { proposalComplaint } from "../conventions.js";
 import { attachments } from "../engine.js";
 import { confirmWrite } from "../gate.js";

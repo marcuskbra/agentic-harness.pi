@@ -12,15 +12,11 @@
 
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { Type } from "@sinclair/typebox";
-import {
-	type BoundTarget,
-	changeInPlay,
-	chooseChange,
-	type ServingRepo,
-	unbackedDeclarations,
-} from "../../../lib/review/index.js";
+import { changeInPlay, chooseChange } from "../../../lib/review/attach.js";
+import { unbackedDeclarations } from "../../../lib/review/backed.js";
+import { type BoundTarget, type ServingRepo } from "../../../lib/review/engine.js";
 import { stackStep } from "../../../lib/review/stack.js";
-import { displayPath } from "../../../lib/ui/index.js";
+import { displayPath } from "../../../lib/ui/path.js";
 import { attachments, reviewEngine } from "../engine.js";
 import { GLYPH } from "../render.js";
 import { treeStandingFor } from "../work.js";

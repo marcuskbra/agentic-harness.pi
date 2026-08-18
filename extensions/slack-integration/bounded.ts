@@ -13,7 +13,8 @@
  * knowing how a caller asks for less.
  */
 
-import { boundedByDetails, openSessionStore } from "../../lib/result/index.js";
+import { boundedByDetails } from "../../lib/result/details.js";
+import { openSessionStore } from "../../lib/result/location.js";
 
 /** How a caller asks Slack for a smaller answer. */
 const NARROWING =

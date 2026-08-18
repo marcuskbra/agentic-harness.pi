@@ -14,17 +14,13 @@ import { homedir } from "node:os";
 import { join } from "node:path";
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { stateDir } from "../../lib/internal/paths.js";
-import {
-	type AttachmentStore,
-	createAttachmentStore,
-	createDraftStore,
-	createGitHubProvider,
-	createGitProvider,
-	createReviewEngine,
-	type Exec,
-	type ReviewEngine,
-	registerReviewProvider,
-} from "../../lib/review/index.js";
+import { type Exec } from "../../lib/exec/exec.js";
+import { type AttachmentStore, createAttachmentStore } from "../../lib/review/attach.js";
+import { createDraftStore } from "../../lib/review/draft/store.js";
+import { createReviewEngine, type ReviewEngine } from "../../lib/review/engine.js";
+import { createGitProvider } from "../../lib/review/providers/git/index.js";
+import { createGitHubProvider } from "../../lib/review/providers/github/index.js";
+import { registerReviewProvider } from "../../lib/review/register.js";
 import { loadReviewConfig } from "./config.js";
 
 /** Where drafts live. */

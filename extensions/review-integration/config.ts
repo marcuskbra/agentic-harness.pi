@@ -8,11 +8,7 @@
  */
 
 import { loadPackageConfig } from "../../lib/internal/config/loader.js";
-import type {
-	ReferenceMapping,
-	RepoMapping,
-	ReviewConfig,
-} from "../../lib/review/index.js";
+import type { ReferenceMapping, RepoMapping, ReviewConfig } from "../../lib/review/config.js";
 
 /** Section key for this extension in the package config. */
 export const REVIEW_SLUG = "review";

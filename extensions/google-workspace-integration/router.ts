@@ -10,7 +10,8 @@
 import type { ExtensionContext } from "@earendil-works/pi-coding-agent";
 import type { OAuth2Client } from "google-auth-library";
 import type { ActionParams, ToolResult } from "../../lib/google/types.js";
-import { boundedByDetails, openSessionStore } from "../../lib/result/index.js";
+import { boundedByDetails } from "../../lib/result/details.js";
+import { openSessionStore } from "../../lib/result/location.js";
 import {
 	handleCheckAvailability,
 	handleCreateEvent,

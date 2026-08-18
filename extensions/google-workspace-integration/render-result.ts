@@ -4,7 +4,9 @@
 
 import type { Theme } from "@earendil-works/pi-coding-agent";
 import type { Text } from "@earendil-works/pi-tui";
-import { count, drawInto, firstText } from "../../lib/ui/index.js";
+import { count } from "../../lib/ui/count.js";
+import { drawInto } from "../../lib/ui/tool-call.js";
+import { firstText } from "../../lib/ui/tool-result.js";
 
 interface RenderOptions {
 	terminalWidth?: number;

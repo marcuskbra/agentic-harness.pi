@@ -4,13 +4,10 @@
  */
 
 import type { ExtensionContext } from "@earendil-works/pi-coding-agent";
-import {
-	ALLOW,
-	type CommandGuardian,
-	formatRedirectBlock,
-	type GuardianResult,
-} from "../../lib/guardian/index.js";
-import { promptSingle, renderMarkdown } from "../../lib/ui/index.js";
+import { formatRedirectBlock } from "../../lib/guardian/redirect.js";
+import { ALLOW, type CommandGuardian, type GuardianResult } from "../../lib/guardian/types.js";
+import { renderMarkdown } from "../../lib/ui/content-renderer.js";
+import { promptSingle } from "../../lib/ui/panel.js";
 import {
 	DESTRUCTIVE_PATTERNS,
 	type DestructivePattern,

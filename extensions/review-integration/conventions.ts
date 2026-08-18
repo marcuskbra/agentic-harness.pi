@@ -25,19 +25,13 @@
  * say the same thing and there is one place to improve it.
  */
 
-import {
-	detectProseViolations,
-	formatProseBlock,
-} from "../../lib/prose/index.js";
-import {
-	detectSectionViolations,
-	formatSectionBlock,
-	PR_SECTIONS,
-} from "../../lib/sections/index.js";
-import {
-	detectTitleViolations,
-	formatTitleBlock,
-} from "../../lib/title/index.js";
+import { formatProseBlock } from "../../lib/prose/block.js";
+import { detectProseViolations } from "../../lib/prose/detect.js";
+import { formatSectionBlock } from "../../lib/sections/block.js";
+import { detectSectionViolations } from "../../lib/sections/detect.js";
+import { PR_SECTIONS } from "../../lib/sections/sanctioned.js";
+import { formatTitleBlock } from "../../lib/title/block.js";
+import { detectTitleViolations } from "../../lib/title/detect.js";
 
 /**
  * A refusal naming what to fix about a proposal, or nothing.

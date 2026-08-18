@@ -13,27 +13,19 @@
 
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { Type } from "@sinclair/typebox";
-import { citeListing, openSessionStore } from "../../../lib/result/index.js";
-import type {
-	BoundTarget,
-	Decision,
-	Finding,
-} from "../../../lib/review/index.js";
-import {
-	createDecisionLedger,
-	createFindingStore,
-	createFixQueue,
-	createVisitLog,
-	describeAnchor,
-	describeVisit,
-	followUpOn,
-	type QueuedFix,
-	reactableAddresses,
-	reactables,
-	sinceLastVisit,
-	tallyReceptions,
-} from "../../../lib/review/index.js";
-import { count } from "../../../lib/ui/index.js";
+import { citeListing } from "../../../lib/result/listing.js";
+import { openSessionStore } from "../../../lib/result/location.js";
+import type { Decision } from "../../../lib/review/decided.js";
+import type { BoundTarget } from "../../../lib/review/engine.js";
+import type { Finding } from "../../../lib/review/finding.js";
+import { describeAnchor } from "../../../lib/review/anchor.js";
+import { createDecisionLedger } from "../../../lib/review/decided.js";
+import { createFindingStore } from "../../../lib/review/finding.js";
+import { createFixQueue, type QueuedFix } from "../../../lib/review/fix.js";
+import { followUpOn, tallyReceptions } from "../../../lib/review/followup.js";
+import { reactableAddresses, reactables } from "../../../lib/review/reactable.js";
+import { createVisitLog, describeVisit, sinceLastVisit } from "../../../lib/review/revisited.js";
+import { count } from "../../../lib/ui/count.js";
 import { decisionDir, findingDir, fixDir, visitDir } from "../engine.js";
 import {
 	checksLines,

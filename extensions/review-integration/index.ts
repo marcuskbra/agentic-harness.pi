@@ -16,24 +16,15 @@ import type {
 	ExtensionAPI,
 	SessionStartEvent,
 } from "@earendil-works/pi-coding-agent";
-import {
-	clearTargetBindings,
-	createRunStore,
-	inheritAttachments,
-	listReviewProviders,
-	pruneAttachments,
-	REVIEW_READY,
-	REVIEW_REGISTER_PROVIDER,
-	REVIEW_REQUEST_SUBSTRATE,
-	type ReviewProvider,
-	type ReviewSubstrateApi,
-	registerReviewProvider,
-} from "../../lib/review/index.js";
-import {
-	ReviewerArtifactsStore,
-	recoverReviewerRuns,
-} from "../../lib/subagent/index.js";
-import { count } from "../../lib/ui/index.js";
+import { createRunStore } from "../../lib/review/ask/store.js";
+import { inheritAttachments, pruneAttachments } from "../../lib/review/attach.js";
+import { clearTargetBindings } from "../../lib/review/bind.js";
+import { REVIEW_READY, REVIEW_REGISTER_PROVIDER, REVIEW_REQUEST_SUBSTRATE, type ReviewSubstrateApi } from "../../lib/review/events.js";
+import { type ReviewProvider } from "../../lib/review/provider.js";
+import { listReviewProviders, registerReviewProvider } from "../../lib/review/register.js";
+import { ReviewerArtifactsStore } from "../../lib/subagent/artifacts.js";
+import { recoverReviewerRuns } from "../../lib/subagent/recovery.js";
+import { count } from "../../lib/ui/count.js";
 import {
 	attachmentDir,
 	forgetReviewEngine,

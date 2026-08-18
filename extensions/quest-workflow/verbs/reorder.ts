@@ -5,7 +5,7 @@
  * (cross-bucket priority moves).
  */
 
-import type { QuestPriority } from "../../../lib/quest/index.js";
+import type { QuestPriority } from "../../../lib/quest/types.js";
 import { count } from "../../../lib/ui/count.js";
 import {
 	appendJourneyEntry,

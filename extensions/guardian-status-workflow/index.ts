@@ -18,7 +18,7 @@ import {
 	type GuardianOutcome,
 	list,
 } from "../../lib/internal/guardian/registry.js";
-import { view } from "../../lib/ui/index.js";
+import { view } from "../../lib/ui/panel.js";
 
 const SECONDS_PER_MINUTE = 60;
 const SECONDS_PER_HOUR = SECONDS_PER_MINUTE * 60;

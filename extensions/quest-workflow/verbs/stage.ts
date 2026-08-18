@@ -24,15 +24,11 @@ import {
 	removeTreeFromQuest,
 	setPendingPrune,
 } from "../../../lib/internal/quest/trees.js";
-import {
-	checkboxProgress,
-	type DocumentFrontMatter,
-	type DocumentKind,
-	mintId,
-	type QuestSession,
-	scaffoldDocument,
-} from "../../../lib/quest/index.js";
-import { resolveTreeProvider } from "../../../lib/tree/index.js";
+import { mintId } from "../../../lib/internal/quest/id.js";
+import { checkboxProgress } from "../../../lib/internal/quest/quest-doc.js";
+import { scaffoldDocument } from "../../../lib/internal/quest/scaffold.js";
+import { type DocumentFrontMatter, type DocumentKind, type QuestSession } from "../../../lib/quest/types.js";
+import { resolveTreeProvider } from "../../../lib/tree/resolve.js";
 import { count, noun, verb } from "../../../lib/ui/count.js";
 import { displayPath } from "../../../lib/ui/path.js";
 import {

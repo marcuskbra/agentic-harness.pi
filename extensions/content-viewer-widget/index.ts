@@ -13,14 +13,9 @@ import type {
 	ExtensionContext,
 	Theme,
 } from "@earendil-works/pi-coding-agent";
-import {
-	languageFromPath,
-	preHighlightCode,
-	renderCode,
-	renderDiff,
-	renderMarkdown,
-	view,
-} from "../../lib/ui/index.js";
+import { languageFromPath, renderCode, renderDiff, renderMarkdown } from "../../lib/ui/content-renderer.js";
+import { view } from "../../lib/ui/panel.js";
+import { preHighlightCode } from "../../lib/ui/index.js";
 
 /** Content type for explicit rendering. */
 type ContentType = "markdown" | "diff" | "code";

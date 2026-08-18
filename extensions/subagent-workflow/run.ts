@@ -16,10 +16,7 @@
  * `lib/subagent/`.
  */
 
-import {
-	recordRunEverywhere,
-	runRecordFrom,
-} from "../../lib/observability/index.js";
+import { recordRunEverywhere, runRecordFrom } from "../../lib/observability/recorder.js";
 import { count as grouped } from "../../lib/result/counts.js";
 import { ReviewerArtifactsStore } from "../../lib/subagent/artifacts.js";
 import type {
