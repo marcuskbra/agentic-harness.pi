@@ -32,16 +32,7 @@ import {
 	writeFileSync,
 } from "node:fs";
 import { join } from "node:path";
-import {
-	askedOnce,
-	isOwner,
-	type Owner,
-	ownerNow,
-	ownerStanding,
-	type ProcessFacts,
-	sameProcess,
-	systemFacts,
-} from "../process/index.js";
+import { askedOnce, isOwner, type Owner, ownerNow, ownerStanding, type ProcessFacts, sameProcess, systemFacts } from "../process/process.js";
 import type { HeldTree } from "./broker.js";
 
 /** Somewhere to write down what was cut. */

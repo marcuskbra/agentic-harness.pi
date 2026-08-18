@@ -26,13 +26,7 @@ import {
 	writeFile,
 } from "node:fs/promises";
 import { join } from "node:path";
-import {
-	askedOnce,
-	type Owner,
-	ownerNow,
-	ownerStanding,
-	type ProcessFacts,
-} from "../process/index.js";
+import { askedOnce, type Owner, ownerNow, ownerStanding, type ProcessFacts } from "../process/process.js";
 import { isDirectory, isNotFound, safeSegment } from "./errno.js";
 
 /** A fleet that was dispatched, as the ledger holds it. */

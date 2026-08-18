@@ -24,7 +24,7 @@
  * to be rewritten.
  */
 
-import type { Exec } from "../exec/index.js";
+import type { Exec } from "../exec/exec.js";
 import type { WorkRebaser } from "./rebase.js";
 import {
 	orderStack,

@@ -15,7 +15,7 @@
  * refused when you are wrong.
  */
 
-import type { Exec } from "../exec/index.js";
+import type { Exec } from "../exec/exec.js";
 
 /** Where a branch went, or why it did not. */
 export type PushOutcome =

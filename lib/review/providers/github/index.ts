@@ -10,7 +10,7 @@
  * derived and says so.
  */
 
-import type { ProviderDeps } from "../../../exec/index.js";
+import type { ProviderDeps } from "../../../exec/exec.js";
 import type { Capabilities } from "../../capabilities.js";
 import type { Reaction } from "../../conversation.js";
 import type { ReviewProvider } from "../../provider.js";

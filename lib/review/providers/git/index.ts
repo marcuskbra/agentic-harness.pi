@@ -16,8 +16,8 @@
  * claim and belong in providers of their own.
  */
 
-import type { Exec, ProviderDeps } from "../../../exec/index.js";
-import { run } from "../../../exec/index.js";
+import type { Exec, ProviderDeps } from "../../../exec/exec.js";
+import { run } from "../../../exec/exec.js";
 import type { Capabilities } from "../../capabilities.js";
 import type { ChangeRef, RepoLocator } from "../../change.js";
 import type {

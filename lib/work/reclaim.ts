@@ -16,7 +16,7 @@
  * work trunk cannot vouch for stay where they are.
  */
 
-import { type Exec, run } from "../exec/index.js";
+import { type Exec, run } from "../exec/exec.js";
 import { displayPath } from "../ui/path.js";
 import type { Reclaimable } from "./tidy.js";
 

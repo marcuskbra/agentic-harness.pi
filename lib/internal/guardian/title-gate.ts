@@ -6,9 +6,9 @@
  * read/persist wiring against the shared session store.
  */
 
-import type { GateDeps } from "../../gate/index.js";
+import type { GateDeps } from "../../gate/deps.js";
 import type { GuardianResult } from "../../guardian/types.js";
-import { type TitleGateConfig, titleGateDecision } from "../../title/index.js";
+import { type TitleGateConfig, titleGateDecision } from "../../title/gate.js";
 
 /** Run the title gate over a title. Returns a block or undefined. */
 export function runTitleGate(

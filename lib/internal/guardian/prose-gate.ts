@@ -6,9 +6,10 @@
  * wiring against the shared session store.
  */
 
-import type { GateDeps } from "../../gate/index.js";
+import type { GateDeps } from "../../gate/deps.js";
 import type { GuardianResult } from "../../guardian/types.js";
-import { detectProseViolations, proseGateDecision } from "../../prose/index.js";
+import { detectProseViolations } from "../../prose/detect.js";
+import { proseGateDecision } from "../../prose/gate.js";
 import { sessionGateDeps } from "../gate/session-deps.js";
 
 export type { GateDeps };

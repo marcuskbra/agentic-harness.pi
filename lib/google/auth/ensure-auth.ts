@@ -6,7 +6,7 @@
 
 import type { ExtensionContext } from "@earendil-works/pi-coding-agent";
 import type { OAuth2Client } from "google-auth-library";
-import { promptSingle } from "../../ui/index.js";
+import { promptSingle } from "../../ui/panel.js";
 import {
 	getCredentials,
 	getDefaultAccount,

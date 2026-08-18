@@ -16,8 +16,8 @@
 import { unlink, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import type { Exec } from "../../../exec/index.js";
-import { run } from "../../../exec/index.js";
+import type { Exec } from "../../../exec/exec.js";
+import { run } from "../../../exec/exec.js";
 import type { Anchor, DiffSide } from "../../anchor.js";
 import type { Actor, ChangeRef, RepoLocator } from "../../change.js";
 import type {

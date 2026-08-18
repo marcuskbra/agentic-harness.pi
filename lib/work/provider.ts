@@ -23,7 +23,7 @@
  * plainly more specific than one for any repo.
  */
 
-import type { RepoLocator } from "../review/index.js";
+import type { RepoLocator } from "../review/change.js";
 
 /** What choosing needs to know about a provider. */
 export interface TreeProviderInfo {

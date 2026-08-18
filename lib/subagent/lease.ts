@@ -17,12 +17,7 @@
  */
 
 import { stat } from "node:fs/promises";
-import {
-	type ProcessFacts,
-	SAME_PROCESS_MS,
-	sameProcess,
-	systemFacts,
-} from "../process/index.js";
+import { type ProcessFacts, SAME_PROCESS_MS, sameProcess, systemFacts } from "../process/process.js";
 import type { ReviewerArtifactsStore } from "./artifacts.js";
 
 // Re-exported rather than moved out of sight. These were defined here

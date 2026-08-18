@@ -16,7 +16,7 @@
  * the high-volume Slack surface is far more corrosive.
  */
 
-import type { Violation } from "../gate/index.js";
+import type { Violation } from "../gate/decision.js";
 
 /** A single Slack content violation. */
 export interface SlackViolation extends Violation {

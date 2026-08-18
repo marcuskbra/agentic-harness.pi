@@ -10,8 +10,8 @@
  * draft about itself.
  */
 
-import type { Exec } from "../exec/index.js";
-import { run } from "../exec/index.js";
+import type { Exec } from "../exec/exec.js";
+import { run } from "../exec/exec.js";
 import { resolveRepo, resolveTarget } from "./bind.js";
 import type { Capabilities } from "./capabilities.js";
 import type {

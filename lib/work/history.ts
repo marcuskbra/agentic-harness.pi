@@ -8,7 +8,7 @@
  * untracked file counts as work here rather than as noise.
  */
 
-import { type Exec, run } from "../exec/index.js";
+import { type Exec, run } from "../exec/exec.js";
 import { displayPath } from "../ui/path.js";
 import type { LocalBranch, WorktreeOnDisk } from "./tidy.js";
 

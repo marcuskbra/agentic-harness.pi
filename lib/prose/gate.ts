@@ -5,11 +5,7 @@
  * lives in decideGate so prose and sections share one behaviour.
  */
 
-import {
-	decideGate,
-	type GateDecision,
-	violationSignature,
-} from "../gate/index.js";
+import { decideGate, type GateDecision, violationSignature } from "../gate/decision.js";
 import { formatProseBlock } from "./block.js";
 import type { ProseViolation } from "./detect.js";
 

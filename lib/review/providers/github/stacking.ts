@@ -15,7 +15,7 @@
  * of them would be a lie of omission.
  */
 
-import type { Exec } from "../../../exec/index.js";
+import type { Exec } from "../../../exec/exec.js";
 import type { ChangeRef, Proposal } from "../../change.js";
 import type { LocalBranch, StackingFacet } from "../../provider.js";
 import type { Stack, StackNode } from "../../stack.js";

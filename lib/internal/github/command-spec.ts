@@ -6,7 +6,7 @@
  * these in.
  */
 
-import type { FlagSpec } from "../../command/index.js";
+import type { FlagSpec } from "../../command/flags.js";
 
 /**
  * The body flags of gh pr/issue create and edit: the inline body

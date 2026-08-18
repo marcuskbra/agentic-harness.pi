@@ -7,7 +7,7 @@
  * changes works perfectly and answers the wrong question.
  */
 
-import { withoutCredentials } from "../remote/index.js";
+import { withoutCredentials } from "../remote/name.js";
 
 /**
  * Both names when the checkout's remote and the repo key disagree, or

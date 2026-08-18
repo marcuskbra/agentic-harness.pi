@@ -16,7 +16,7 @@
 
 import { existsSync, readFileSync } from "node:fs";
 import { isAbsolute, join } from "node:path";
-import type { Exec } from "../exec/index.js";
+import type { Exec } from "../exec/exec.js";
 import { unattended } from "./unattended.js";
 
 /** Where a replay got to. */

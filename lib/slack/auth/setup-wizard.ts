@@ -12,7 +12,7 @@
  */
 
 import type { ExtensionContext } from "@earendil-works/pi-coding-agent";
-import { promptSingle, view } from "../../ui/index.js";
+import { promptSingle, view } from "../../ui/panel.js";
 import { SlackClient } from "../api/client.js";
 import { extractFromBrowser } from "./browser-extract.js";
 import {

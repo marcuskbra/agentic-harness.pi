@@ -20,7 +20,7 @@
 import { unlink, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { type Exec, run } from "../../../exec/index.js";
+import { type Exec, run } from "../../../exec/exec.js";
 import type { ChangeRef, Proposal, RepoLocator } from "../../change.js";
 import type { RerunOutcome } from "../../checks.js";
 import type {

@@ -8,7 +8,7 @@
  * check that turns an unparseable guardable command into a reissue.
  */
 
-import { tokenize } from "../command/index.js";
+import { tokenize } from "../command/tokenize.js";
 import type { GuardianBlock } from "./types.js";
 
 /**

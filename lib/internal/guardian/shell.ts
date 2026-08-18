@@ -7,16 +7,10 @@
  * parsing lives in lib/shell/.
  */
 
-import {
-	type CommandLine,
-	effectiveCwd,
-	type FlagSpec,
-	findFlag,
-	findFlags,
-	type SimpleCommand,
-	tokenize,
-	type Word,
-} from "../../command/index.js";
+import { effectiveCwd } from "../../command/cwd.js";
+import { type FlagSpec, findFlag, findFlags } from "../../command/flags.js";
+import { tokenize } from "../../command/tokenize.js";
+import { type CommandLine, type SimpleCommand, type Word } from "../../command/types.js";
 import { unquote } from "../../shell/parse.js";
 
 /**

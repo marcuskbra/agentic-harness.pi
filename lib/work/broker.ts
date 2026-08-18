@@ -9,7 +9,7 @@
  * `provider.ts`, so what is left here is genuinely just custody.
  */
 
-import type { Owner } from "../process/index.js";
+import type { Owner } from "../process/process.js";
 import type { TreeMemory } from "./memory.js";
 import { chooseTreeProvider, type TreeProviderInfo } from "./provider.js";
 import {

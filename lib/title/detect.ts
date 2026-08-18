@@ -6,7 +6,7 @@
  * rephrasing to the author.
  */
 
-import type { Violation } from "../gate/index.js";
+import type { Violation } from "../gate/decision.js";
 
 /** A single title convention violation. */
 export interface TitleViolation extends Violation {

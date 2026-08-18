@@ -6,7 +6,7 @@
  * sections and Slack share one behaviour.
  */
 
-import { decideGate, type GateDecision } from "../gate/index.js";
+import { decideGate, type GateDecision } from "../gate/decision.js";
 import { formatSlackBlock } from "./block-message.js";
 import { detectSlackViolations } from "./detect.js";
 
