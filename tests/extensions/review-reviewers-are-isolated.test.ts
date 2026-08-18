@@ -182,20 +182,29 @@ describe("what a reviewer inherits", () => {
 		// review library rather than named here, since a list written in a
 		// test is a list that waves the next round kind through. A round
 		// nobody imports is a round nobody calls.
-		const imports = source.slice(
-			0,
-			source.indexOf('} from "../../../lib/review/index.js"'),
-		);
-		const rounds = [...imports.matchAll(/^\t((?:run|start)[A-Z]\w*),$/gm)].map(
-			(match) => `${match[1]}(`,
-		);
+		// Every name of round shape imported from the review library,
+		// wherever in the library it now lives: a barrel line or a deep
+		// path into the module that defines it both read the same here.
+		const rounds = [
+			...new Set(
+				[
+					...source.matchAll(
+						/import\s+(?:type\s+)?\{([^}]*)\}\s+from\s+"[^"]*lib\/review[^"]*"/g,
+					),
+				].flatMap((match) =>
+					(match[1] ?? "")
+						.split(",")
+						.map((name) => name.trim().replace(/^type\s+/, ""))
+						.filter((name) => /^(?:run|start)[A-Z]\w*$/.test(name)),
+				),
+			),
+		].map((name) => `${name}(`);
 
 		// Discovered twice and checked against itself, because one regex
-		// over a slice can lose a round without anybody noticing: a
-		// threshold passes on five of six, and the slice stays honest only
-		// while the formatter keeps the imports in one alphabetical block.
-		// The body is where the rounds are actually run, so what it awaits
-		// and what the file imports have to name the same set.
+		// over the imports can lose a round without anybody noticing: a
+		// threshold passes on five of six. The body is where the rounds
+		// are actually run, so what it awaits and what the file imports
+		// have to name the same set.
 		const awaited = new Set(
 			[...source.matchAll(/await ((?:run|start)[A-Z]\w*)\(/g)].map(
 				(match) => `${match[1]}(`,
