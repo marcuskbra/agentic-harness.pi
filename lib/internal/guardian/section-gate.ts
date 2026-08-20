@@ -8,7 +8,10 @@
 
 import type { GateDeps } from "../../gate/deps.js";
 import type { GuardianResult } from "../../guardian/types.js";
-import { type SectionGateConfig, sectionGateDecision } from "../../sections/gate.js";
+import {
+	type SectionGateConfig,
+	sectionGateDecision,
+} from "../../sections/gate.js";
 
 /** Run the section gate over a body. Returns a block or undefined. */
 export function runSectionGate(

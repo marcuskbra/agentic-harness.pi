@@ -14,7 +14,7 @@
 
 import { type FlagSpec, findFlag } from "../../command/flags.js";
 import { tokenize } from "../../command/tokenize.js";
-import { type SimpleCommand } from "../../command/types.js";
+import type { SimpleCommand } from "../../command/types.js";
 import { unquote } from "../../shell/parse.js";
 import { GH_BODY_SPEC } from "./command-spec.js";
 

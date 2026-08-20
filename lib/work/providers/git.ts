@@ -16,8 +16,8 @@
  */
 
 import { join } from "node:path";
-import { withoutCredentials } from "../../remote/name.js";
 import { type Exec, run } from "../../exec/exec.js";
+import { withoutCredentials } from "../../remote/name.js";
 import { displayPath } from "../../ui/path.js";
 import type { TreeProvider } from "../broker.js";
 import { treeIdentity, treeSource } from "../tree.js";

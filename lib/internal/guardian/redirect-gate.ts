@@ -20,7 +20,7 @@
  */
 
 import { decideGate } from "../../gate/decision.js";
-import { type GateDeps } from "../../gate/deps.js";
+import type { GateDeps } from "../../gate/deps.js";
 import type { GuardianResult } from "../../guardian/types.js";
 import { resolveRepo } from "../../review/bind.js";
 

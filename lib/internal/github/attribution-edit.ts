@@ -11,7 +11,7 @@
 import { applyEdits, type Edit } from "../../command/edit.js";
 import { findFlag } from "../../command/flags.js";
 import { tokenize } from "../../command/tokenize.js";
-import { type SimpleCommand } from "../../command/types.js";
+import type { SimpleCommand } from "../../command/types.js";
 import { stripHeredocBodies, stripShellData } from "../../shell/parse.js";
 import { isGhCommand } from "./cli.js";
 import { GH_BODY_SPEC } from "./command-spec.js";

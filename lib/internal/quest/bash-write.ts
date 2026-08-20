@@ -8,8 +8,12 @@
  */
 
 import { tokenize } from "../../command/tokenize.js";
-import { type Word } from "../../command/types.js";
-import { stripHeredocBodies, stripShellData, unquote } from "../../shell/parse.js";
+import type { Word } from "../../command/types.js";
+import {
+	stripHeredocBodies,
+	stripShellData,
+	unquote,
+} from "../../shell/parse.js";
 
 /** What kind of write, if any, a bash command performs. */
 export type BashWriteKind = "git-mutating" | "bash-write" | "read-only";
