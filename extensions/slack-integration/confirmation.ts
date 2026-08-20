@@ -13,8 +13,8 @@ import type {
 import { renderMarkdown } from "../../lib/ui/content-renderer.js";
 import { runGate } from "../../lib/ui/gate-queue.js";
 import { promptSingle, promptTabbed } from "../../lib/ui/panel.js";
-import { type KeyAction } from "../../lib/ui/types.js";
 import { formatRedirectReason } from "../../lib/ui/redirect.js";
+import type { KeyAction } from "../../lib/ui/types.js";
 
 /** File metadata for the upload confirmation gate. */
 export interface FileInfo {

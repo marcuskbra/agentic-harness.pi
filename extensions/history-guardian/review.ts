@@ -5,7 +5,11 @@
 
 import type { ExtensionContext } from "@earendil-works/pi-coding-agent";
 import { formatRedirectBlock } from "../../lib/guardian/redirect.js";
-import { ALLOW, type CommandGuardian, type GuardianResult } from "../../lib/guardian/types.js";
+import {
+	ALLOW,
+	type CommandGuardian,
+	type GuardianResult,
+} from "../../lib/guardian/types.js";
 import { renderMarkdown } from "../../lib/ui/content-renderer.js";
 import { promptSingle } from "../../lib/ui/panel.js";
 import {

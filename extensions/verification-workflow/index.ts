@@ -33,7 +33,10 @@ import { getLastEntry } from "../../lib/internal/state.js";
 import { setVerificationFailing } from "../../lib/internal/verification/signal.js";
 import { resolveLspBackend } from "../../lib/lsp/registry.js";
 import { resolveCheckCommand } from "../../lib/verification/resolve.js";
-import { type FileError, fastLayerVerdict } from "../../lib/verification/verdict.js";
+import {
+	type FileError,
+	fastLayerVerdict,
+} from "../../lib/verification/verdict.js";
 import {
 	createVerificationState,
 	MAX_FIX_ATTEMPTS,

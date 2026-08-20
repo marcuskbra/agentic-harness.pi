@@ -16,17 +16,28 @@
 
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import { recordRunEverywhere, runRecordFrom } from "../../lib/observability/recorder.js";
-import type { AskAnswer, AskLimit, AskStop } from "../../lib/review/ask/council.js";
+import {
+	recordRunEverywhere,
+	runRecordFrom,
+} from "../../lib/observability/recorder.js";
+import type {
+	AskAnswer,
+	AskLimit,
+	AskStop,
+} from "../../lib/review/ask/council.js";
 import type { AskRun } from "../../lib/review/ask/run.js";
-import type { ReviewerArtifactsStore, ReviewerTerminalState } from "../../lib/subagent/artifacts.js";
+import type {
+	ReviewerArtifactsStore,
+	ReviewerTerminalState,
+} from "../../lib/subagent/artifacts.js";
+import {
+	detectStaleInstallInStderr,
+	STALE_RUNTIME_WARNING_PREFIX,
+} from "../../lib/subagent/health.js";
+import { mergeResumeOutcome, RESUME_SUFFIX } from "../../lib/subagent/index.js";
 import type { PiInstall } from "../../lib/subagent/install.js";
 import type { ProcessFacts } from "../../lib/subagent/lease.js";
-import type { RunPi, RunReviewerResult } from "../../lib/subagent/subagent.js";
-import { detectStaleInstallInStderr, STALE_RUNTIME_WARNING_PREFIX } from "../../lib/subagent/health.js";
 import { supervisorStanding, systemFacts } from "../../lib/subagent/lease.js";
-import { mergeWrapUpOutcome, WRAP_UP_SUFFIX } from "../../lib/subagent/subagent.js";
-import { mergeResumeOutcome, RESUME_SUFFIX } from "../../lib/subagent/index.js";
 import {
 	JOURNAL_SAYS,
 	journalWarnings,
@@ -38,6 +49,11 @@ import {
 	type StartPi,
 	type SupervisorSpawnFn,
 } from "../../lib/subagent/runpi/supervisor.js";
+import type { RunPi, RunReviewerResult } from "../../lib/subagent/subagent.js";
+import {
+	mergeWrapUpOutcome,
+	WRAP_UP_SUFFIX,
+} from "../../lib/subagent/subagent.js";
 import { budgetForLimit } from "./budget.js";
 
 /**

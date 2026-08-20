@@ -14,7 +14,7 @@ import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { Type } from "@sinclair/typebox";
 import { changeInPlay, chooseChange } from "../../../lib/review/attach.js";
 import { unbackedDeclarations } from "../../../lib/review/backed.js";
-import { type BoundTarget, type ServingRepo } from "../../../lib/review/engine.js";
+import type { BoundTarget, ServingRepo } from "../../../lib/review/engine.js";
 import { stackStep } from "../../../lib/review/stack.js";
 import { displayPath } from "../../../lib/ui/path.js";
 import { attachments, reviewEngine } from "../engine.js";

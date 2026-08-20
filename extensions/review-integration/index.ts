@@ -17,11 +17,22 @@ import type {
 	SessionStartEvent,
 } from "@earendil-works/pi-coding-agent";
 import { createRunStore } from "../../lib/review/ask/store.js";
-import { inheritAttachments, pruneAttachments } from "../../lib/review/attach.js";
+import {
+	inheritAttachments,
+	pruneAttachments,
+} from "../../lib/review/attach.js";
 import { clearTargetBindings } from "../../lib/review/bind.js";
-import { REVIEW_READY, REVIEW_REGISTER_PROVIDER, REVIEW_REQUEST_SUBSTRATE, type ReviewSubstrateApi } from "../../lib/review/events.js";
-import { type ReviewProvider } from "../../lib/review/provider.js";
-import { listReviewProviders, registerReviewProvider } from "../../lib/review/register.js";
+import {
+	REVIEW_READY,
+	REVIEW_REGISTER_PROVIDER,
+	REVIEW_REQUEST_SUBSTRATE,
+	type ReviewSubstrateApi,
+} from "../../lib/review/events.js";
+import type { ReviewProvider } from "../../lib/review/provider.js";
+import {
+	listReviewProviders,
+	registerReviewProvider,
+} from "../../lib/review/register.js";
 import { ReviewerArtifactsStore } from "../../lib/subagent/artifacts.js";
 import { recoverReviewerRuns } from "../../lib/subagent/recovery.js";
 import { count } from "../../lib/ui/count.js";

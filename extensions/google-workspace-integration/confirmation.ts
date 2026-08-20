@@ -6,9 +6,9 @@
 
 import type { ExtensionContext } from "@earendil-works/pi-coding-agent";
 import { promptSingle } from "../../lib/ui/panel.js";
-import { wordWrap } from "../../lib/ui/text-layout.js";
-import { type PromptResult } from "../../lib/ui/types.js";
 import { formatRedirectReason } from "../../lib/ui/redirect.js";
+import { wordWrap } from "../../lib/ui/text-layout.js";
+import type { PromptResult } from "../../lib/ui/types.js";
 
 /** Email fields presented to the user for confirmation before sending. */
 export interface EmailData {

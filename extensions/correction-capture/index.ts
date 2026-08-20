@@ -20,7 +20,13 @@ import { join } from "node:path";
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { Type } from "@sinclair/typebox";
 import { runSideCompletion } from "../../lib/completion/side.js";
-import { condenseTranscript, distillSystemPrompt, distillUserPrompt, parseRules, type Turn } from "../../lib/governance/distill.js";
+import {
+	condenseTranscript,
+	distillSystemPrompt,
+	distillUserPrompt,
+	parseRules,
+	type Turn,
+} from "../../lib/governance/distill.js";
 import { renderRulesBlock } from "../../lib/governance/render.js";
 import { openRuleStore, type RuleStore } from "../../lib/governance/store.js";
 import { dataDir } from "../../lib/internal/paths.js";

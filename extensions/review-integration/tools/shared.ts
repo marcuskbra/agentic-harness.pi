@@ -12,12 +12,20 @@ import type {
 } from "@earendil-works/pi-coding-agent";
 import { Text } from "@earendil-works/pi-tui";
 import { changeInPlay, chooseChange } from "../../../lib/review/attach.js";
-import { type ChangeRef } from "../../../lib/review/change.js";
-import { type Thread } from "../../../lib/review/conversation.js";
+import type { ChangeRef } from "../../../lib/review/change.js";
+import type { Thread } from "../../../lib/review/conversation.js";
 import { repoElsewhere } from "../../../lib/review/elsewhere.js";
-import { type BoundTarget } from "../../../lib/review/engine.js";
-import { explainFailure, type FailureContext } from "../../../lib/review/failed.js";
-import { findReactable, type Reactable, type ReactableRefusal, reactables } from "../../../lib/review/reactable.js";
+import type { BoundTarget } from "../../../lib/review/engine.js";
+import {
+	explainFailure,
+	type FailureContext,
+} from "../../../lib/review/failed.js";
+import {
+	findReactable,
+	type Reactable,
+	type ReactableRefusal,
+	reactables,
+} from "../../../lib/review/reactable.js";
 import { renderToolCall } from "../../../lib/ui/tool-call.js";
 import { firstText } from "../../../lib/ui/tool-result.js";
 import { attachments, reviewEngine } from "../engine.js";

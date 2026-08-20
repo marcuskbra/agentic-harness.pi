@@ -26,7 +26,7 @@ import { Type } from "@sinclair/typebox";
 import { packageStateDir } from "../../lib/internal/package-state-dir.js";
 import { resolveScope } from "../../lib/memory/scope.js";
 import { openMemoryStore } from "../../lib/memory/store.js";
-import { type Fact, type MemoryStore } from "../../lib/memory/types.js";
+import type { Fact, MemoryStore } from "../../lib/memory/types.js";
 import { registerPromptContributor } from "../../lib/prompt/coordinator.js";
 import { citeListing } from "../../lib/result/listing.js";
 import { openSessionStore } from "../../lib/result/location.js";

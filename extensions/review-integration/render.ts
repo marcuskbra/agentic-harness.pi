@@ -32,15 +32,15 @@
 import type { Theme } from "@earendil-works/pi-coding-agent";
 import { detectProseViolations } from "../../lib/prose/detect.js";
 import type { Anchor } from "../../lib/review/anchor.js";
+import { anchorable, describeAnchor } from "../../lib/review/anchor.js";
 import type { Proposal } from "../../lib/review/change.js";
 import type { ChecksRollup } from "../../lib/review/checks.js";
 import type { Thread } from "../../lib/review/conversation.js";
 import type { DiffModel } from "../../lib/review/diff.js";
 import type { PublishPlan } from "../../lib/review/draft/plan.js";
 import type { PublishOutcome } from "../../lib/review/draft/publish.js";
-import type { Stack } from "../../lib/review/stack.js";
-import { anchorable, describeAnchor } from "../../lib/review/anchor.js";
 import { standsAt } from "../../lib/review/landing.js";
+import type { Stack } from "../../lib/review/stack.js";
 import {
 	languageFromPath,
 	renderCode,

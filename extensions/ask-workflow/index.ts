@@ -14,12 +14,12 @@
 import type { ExtensionAPI, Theme } from "@earendil-works/pi-coding-agent";
 import { truncateToWidth } from "@earendil-works/pi-tui";
 import { Type } from "@sinclair/typebox";
-import { count } from "../../lib/ui/count.js";
 import { renderMarkdown } from "../../lib/ui/content-renderer.js";
+import { count } from "../../lib/ui/count.js";
 import { promptSingle, promptTabbed } from "../../lib/ui/panel.js";
 import { drawInto } from "../../lib/ui/tool-call.js";
 import { firstText } from "../../lib/ui/tool-result.js";
-import { type ListChoice, type PromptItem } from "../../lib/ui/types.js";
+import type { ListChoice, PromptItem } from "../../lib/ui/types.js";
 
 // Types
 interface QuestionOption {

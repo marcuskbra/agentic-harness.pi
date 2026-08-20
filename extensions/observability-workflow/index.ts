@@ -27,7 +27,11 @@ import { Type } from "@sinclair/typebox";
 import { packageStateDir } from "../../lib/internal/package-state-dir.js";
 import { registerRunRecorder } from "../../lib/observability/recorder.js";
 import { openRunStore, type RunStore } from "../../lib/observability/store.js";
-import { type RunRecord, type RunRollup, type RunSummary } from "../../lib/observability/types.js";
+import type {
+	RunRecord,
+	RunRollup,
+	RunSummary,
+} from "../../lib/observability/types.js";
 
 const STATUS_KEY = "observability:summary";
 

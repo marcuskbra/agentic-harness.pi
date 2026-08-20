@@ -15,20 +15,24 @@
 import { realpathSync } from "node:fs";
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { Type } from "@sinclair/typebox";
+import type { Exec } from "../../../lib/exec/exec.js";
 import { sessionGateDeps } from "../../../lib/internal/gate/session-deps.js";
 import { complaintsAbout } from "../../../lib/internal/guardian/commit-format.js";
 import { runProseGate } from "../../../lib/internal/guardian/prose-gate.js";
 import { gitTreeRootOf } from "../../../lib/internal/quest/git-signals.js";
 import { citeListing } from "../../../lib/result/listing.js";
 import { openSessionStore } from "../../../lib/result/location.js";
-import type { Exec } from "../../../lib/exec/exec.js";
 import { count } from "../../../lib/ui/count.js";
 import { displayPath } from "../../../lib/ui/path.js";
 import { treeRequestFrom } from "../../../lib/work/ask.js";
 import { createGitAuthor, namingComplaints } from "../../../lib/work/author.js";
-import { type HeldTree, type TreeBroker } from "../../../lib/work/broker.js";
+import type { HeldTree, TreeBroker } from "../../../lib/work/broker.js";
 import { type TreeClaims, WORK_TREE_CLAIMS } from "../../../lib/work/events.js";
-import { blocksRepoint, createGitHistory, type WorkHistory } from "../../../lib/work/history.js";
+import {
+	blocksRepoint,
+	createGitHistory,
+	type WorkHistory,
+} from "../../../lib/work/history.js";
 import { chooseTree, treeInPlay } from "../../../lib/work/inplay.js";
 import { cautionsFrom, refusalFrom } from "../../../lib/work/objection.js";
 import { createGitPublisher } from "../../../lib/work/publish.js";
@@ -36,7 +40,11 @@ import { createGitRebaser } from "../../../lib/work/rebase.js";
 import { reclaimTrees } from "../../../lib/work/reclaim.js";
 import { createGitStacks } from "../../../lib/work/stacks.js";
 import { surveyTarget } from "../../../lib/work/survey.js";
-import { type OrphanPlan, orphanedTrees, tidyPlan } from "../../../lib/work/tidy.js";
+import {
+	type OrphanPlan,
+	orphanedTrees,
+	tidyPlan,
+} from "../../../lib/work/tidy.js";
 import { execFor, objectionsTo, treeBroker } from "../broker.js";
 import { GLYPH, treeLine } from "../render.js";
 import {

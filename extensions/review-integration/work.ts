@@ -26,11 +26,15 @@
 
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import type { TreeRead } from "../../lib/review/ask/run.js";
-import type { RepoLocator } from "../../lib/review/change.js";
 import { whatItRead } from "../../lib/review/ask/run.js";
+import type { RepoLocator } from "../../lib/review/change.js";
 import { checkoutFor } from "../../lib/review/resolve.js";
 import { treeRequestFrom } from "../../lib/work/ask.js";
-import { WORK_READY, WORK_REQUEST, type WorkApi } from "../../lib/work/events.js";
+import {
+	WORK_READY,
+	WORK_REQUEST,
+	type WorkApi,
+} from "../../lib/work/events.js";
 import { satisfies } from "../../lib/work/tree.js";
 import { loadReviewConfig } from "./config.js";
 

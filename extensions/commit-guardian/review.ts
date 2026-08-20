@@ -10,7 +10,11 @@ import type {
 	Theme,
 } from "@earendil-works/pi-coding-agent";
 import { formatRedirectBlock } from "../../lib/guardian/redirect.js";
-import { ALLOW, type CommandGuardian, type GuardianResult } from "../../lib/guardian/types.js";
+import {
+	ALLOW,
+	type CommandGuardian,
+	type GuardianResult,
+} from "../../lib/guardian/types.js";
 import { readCommitFile } from "../../lib/internal/guardian/commit-file.js";
 import {
 	type CommitValidation,

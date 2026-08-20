@@ -22,7 +22,11 @@ import type { Theme } from "@earendil-works/pi-coding-agent";
 import { truncateToWidth } from "@earendil-works/pi-tui";
 
 import type { QuestEntry } from "../../lib/internal/quest/discovery.js";
-import type { DocumentKind, QuestKind, QuestStatus } from "../../lib/quest/types.js";
+import type {
+	DocumentKind,
+	QuestKind,
+	QuestStatus,
+} from "../../lib/quest/types.js";
 import type { Stage } from "./machine.js";
 
 const KIND_GLYPHS: Record<QuestKind, string> = {

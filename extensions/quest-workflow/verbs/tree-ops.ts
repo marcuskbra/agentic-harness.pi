@@ -23,7 +23,10 @@ import {
 	setPendingPrune,
 } from "../../../lib/internal/quest/trees.js";
 import type { QuestSession } from "../../../lib/quest/types.js";
-import { getTreeProvider, resolveTreeProvider } from "../../../lib/tree/resolve.js";
+import {
+	getTreeProvider,
+	resolveTreeProvider,
+} from "../../../lib/tree/resolve.js";
 import { count, noun } from "../../../lib/ui/count.js";
 import { displayPath } from "../../../lib/ui/path.js";
 import { appendJourneyEntry, inventoryWorktrees } from "../lifecycle.js";

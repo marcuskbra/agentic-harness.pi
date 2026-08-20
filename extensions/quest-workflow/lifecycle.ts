@@ -30,7 +30,12 @@ import {
 	siblingRanks,
 } from "../../lib/internal/quest/discovery.js";
 import type { QuestFieldLens } from "../../lib/internal/quest/fields.js";
-import { explainDocumentFrontMatter } from "../../lib/internal/quest/frontmatter.js";
+import {
+	documentFrontMatterProblem,
+	explainDocumentFrontMatter,
+	parseDocumentFrontMatter,
+	serializeDocumentFrontMatter,
+} from "../../lib/internal/quest/frontmatter.js";
 import {
 	atomicWriteFile,
 	atomicWriteUnderLock,
@@ -40,6 +45,10 @@ import {
 	currentInstanceId,
 	currentProcessIdentity,
 } from "../../lib/internal/quest/process-liveness.js";
+import {
+	checkboxProgress,
+	parseQuestDoc,
+} from "../../lib/internal/quest/quest-doc.js";
 import {
 	diffRanks,
 	nextRank,
@@ -59,9 +68,16 @@ import {
 } from "../../lib/internal/quest/session-liveness.js";
 import { isSealedStatus } from "../../lib/internal/quest/status.js";
 import { getLastEntry } from "../../lib/internal/state.js";
-import { documentFrontMatterProblem, parseDocumentFrontMatter, serializeDocumentFrontMatter } from "../../lib/internal/quest/frontmatter.js";
-import { checkboxProgress, parseQuestDoc } from "../../lib/internal/quest/quest-doc.js";
-import { type DocumentFrontMatter, type DocumentKind, type DocumentStage, type QuestAlias, type QuestFrontMatter, type QuestPriority, type QuestSession, type QuestStatus } from "../../lib/quest/types.js";
+import type {
+	DocumentFrontMatter,
+	DocumentKind,
+	DocumentStage,
+	QuestAlias,
+	QuestFrontMatter,
+	QuestPriority,
+	QuestSession,
+	QuestStatus,
+} from "../../lib/quest/types.js";
 import { identifyCurrentTerminal } from "../../lib/terminal/resolve.js";
 import type { Stage } from "./machine.js";
 import { sessionNameFor } from "./render.js";
