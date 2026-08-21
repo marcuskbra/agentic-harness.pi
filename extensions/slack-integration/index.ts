@@ -26,7 +26,7 @@ import { sessionGateDeps } from "../../lib/internal/gate/session-deps.js";
 import { getLastEntry } from "../../lib/internal/state.js";
 import { ensureAuthenticated } from "../../lib/slack/auth/ensure-auth.js";
 import { count } from "../../lib/ui/count.js";
-import { drawInto } from "../../lib/ui/index.js";
+import { drawInto } from "../../lib/ui/tool-call.js";
 import { handleSlackAuthCommand } from "./auth-command.js";
 import { identityContext } from "./context.js";
 import { routeAction } from "./router.js";

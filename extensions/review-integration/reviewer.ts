@@ -28,23 +28,17 @@ import type {
 } from "@jitsusama/agentic-harness.core/review";
 import { budgetForLimit } from "@jitsusama/agentic-harness.core/review";
 import type {
-	PiInstall,
-	ProcessFacts,
 	ReviewerArtifactsStore,
 	ReviewerTerminalState,
-	RunPi,
-	RunReviewerResult,
-} from "../../lib/subagent/index.js";
+} from "../../lib/subagent/artifacts.js";
 import {
 	detectStaleInstallInStderr,
-	mergeResumeOutcome,
-	mergeWrapUpOutcome,
-	RESUME_SUFFIX,
 	STALE_RUNTIME_WARNING_PREFIX,
-	supervisorStanding,
-	systemFacts,
-	WRAP_UP_SUFFIX,
-} from "../../lib/subagent/index.js";
+} from "../../lib/subagent/health.js";
+import { mergeResumeOutcome, RESUME_SUFFIX } from "../../lib/subagent/index.js";
+import type { PiInstall } from "../../lib/subagent/install.js";
+import type { ProcessFacts } from "../../lib/subagent/lease.js";
+import { supervisorStanding, systemFacts } from "../../lib/subagent/lease.js";
 import {
 	JOURNAL_SAYS,
 	journalWarnings,
@@ -56,6 +50,11 @@ import {
 	type StartPi,
 	type SupervisorSpawnFn,
 } from "../../lib/subagent/runpi/supervisor.js";
+import type { RunPi, RunReviewerResult } from "../../lib/subagent/subagent.js";
+import {
+	mergeWrapUpOutcome,
+	WRAP_UP_SUFFIX,
+} from "../../lib/subagent/subagent.js";
 
 /**
  * Which of our limits took the reviewer away.

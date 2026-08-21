@@ -57,7 +57,7 @@ import {
 	type ToolContent,
 	type ToolResult,
 } from "@jitsusama/agentic-harness.core/slack/types";
-import type { GateDeps } from "../../lib/gate/index.js";
+import type { GateDeps } from "../../lib/gate/deps.js";
 import { count, verb } from "../../lib/ui/count.js";
 import { boundedAnswer } from "./bounded.js";
 import {

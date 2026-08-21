@@ -14,11 +14,9 @@ import {
 	formatRelativeAge,
 	type SessionView,
 } from "../../../lib/internal/quest/session-liveness.js";
-import type { QuestSession } from "../../../lib/quest/index.js";
-import {
-	resolveDriver,
-	type TerminalLayout,
-} from "../../../lib/terminal/index.js";
+import type { QuestSession } from "../../../lib/quest/types.js";
+import { resolveDriver } from "../../../lib/terminal/resolve.js";
+import type { TerminalLayout } from "../../../lib/terminal/types.js";
 import { count } from "../../../lib/ui/count.js";
 import {
 	attachSessionToLoaded,

@@ -84,18 +84,20 @@ import {
 	loadPackageConfig,
 } from "../../../lib/internal/config/loader.js";
 import { packageConfigPath } from "../../../lib/internal/paths.js";
-import type { ReviewerThinkingLevel } from "../../../lib/subagent/index.js";
+import { summarizeStreamActivity } from "../../../lib/subagent/activity.js";
+import { ReviewerArtifactsStore } from "../../../lib/subagent/artifacts.js";
 import {
-	getParentPiInstall,
 	JOURNAL_PACK_PATH,
 	RESUME_SUFFIX,
-	ReviewerArtifactsStore,
+} from "../../../lib/subagent/index.js";
+import { getParentPiInstall } from "../../../lib/subagent/install.js";
+import { fromScript } from "../../../lib/subagent/runpi/fresh.js";
+import type { ReviewerThinkingLevel } from "../../../lib/subagent/subagent.js";
+import {
 	runReviewer,
 	startReviewer,
-	summarizeStreamActivity,
 	WRAP_UP_SUFFIX,
-} from "../../../lib/subagent/index.js";
-import { fromScript } from "../../../lib/subagent/runpi/fresh.js";
+} from "../../../lib/subagent/subagent.js";
 import { THINKING_LEVELS } from "../../../lib/thinking/index.js";
 import { count } from "../../../lib/ui/count.js";
 import { REVIEW_SLUG } from "../config.js";

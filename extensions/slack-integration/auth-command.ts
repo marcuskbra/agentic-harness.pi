@@ -14,7 +14,7 @@ import {
 	SlackClient,
 } from "@jitsusama/agentic-harness.core/slack";
 import { ensureSetup } from "../../lib/slack/auth/setup-wizard.js";
-import { view } from "../../lib/ui/index.js";
+import { view } from "../../lib/ui/panel.js";
 
 /**
  * Handle /slack-auth command.

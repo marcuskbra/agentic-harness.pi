@@ -25,14 +25,11 @@ import {
 	openSessionStore,
 } from "@jitsusama/agentic-harness.core/result";
 import { Type } from "@sinclair/typebox";
-import {
-	type Fact,
-	type MemoryStore,
-	memoryDbPath,
-	openMemoryStore,
-	resolveScope,
-} from "../../lib/memory/index.js";
-import { registerPromptContributor } from "../../lib/prompt/index.js";
+import { memoryDbPath } from "../../lib/memory/index.js";
+import { resolveScope } from "../../lib/memory/scope.js";
+import { openMemoryStore } from "../../lib/memory/store.js";
+import type { Fact, MemoryStore } from "../../lib/memory/types.js";
+import { registerPromptContributor } from "../../lib/prompt/coordinator.js";
 
 /** Memory recall sits just below the conventions in the resident block. */
 const MEMORY_ORDER = 10;

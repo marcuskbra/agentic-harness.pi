@@ -25,7 +25,8 @@ import {
 	repoElsewhere,
 	type Thread,
 } from "@jitsusama/agentic-harness.core/review";
-import { firstText, renderToolCall } from "../../../lib/ui/index.js";
+import { renderToolCall } from "../../../lib/ui/tool-call.js";
+import { firstText } from "../../../lib/ui/tool-result.js";
 import { attachments, reviewEngine } from "../engine.js";
 import type { GateRefusal } from "../gate.js";
 import { GLYPH } from "../render.js";

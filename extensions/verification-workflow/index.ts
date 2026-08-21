@@ -34,7 +34,7 @@ import { setVerificationFailing } from "../../lib/internal/verification/signal.j
 import {
 	type FileError,
 	fastLayerVerdict,
-} from "../../lib/verification/index.js";
+} from "../../lib/verification/verdict.js";
 import {
 	createVerificationState,
 	MAX_FIX_ATTEMPTS,

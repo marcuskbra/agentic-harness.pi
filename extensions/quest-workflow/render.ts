@@ -26,7 +26,7 @@ import type {
 	DocumentKind,
 	QuestKind,
 	QuestStatus,
-} from "../../lib/quest/index.js";
+} from "../../lib/quest/types.js";
 import type { Stage } from "./machine.js";
 
 const KIND_GLYPHS: Record<QuestKind, string> = {

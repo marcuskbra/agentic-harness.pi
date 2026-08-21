@@ -15,15 +15,15 @@ import {
 	validate,
 } from "@jitsusama/agentic-harness.core/guardian/commit-format";
 import { runProseGate } from "@jitsusama/agentic-harness.core/guardian/prose-gate";
+import { formatRedirectBlock } from "../../lib/guardian/redirect.js";
 import {
 	ALLOW,
 	type CommandGuardian,
-	formatRedirectBlock,
 	type GuardianResult,
-} from "../../lib/guardian/index.js";
+} from "../../lib/guardian/types.js";
 import { sessionGateDeps } from "../../lib/internal/gate/session-deps.js";
 import { isVerificationFailing } from "../../lib/internal/verification/signal.js";
-import { promptSingle } from "../../lib/ui/index.js";
+import { promptSingle } from "../../lib/ui/panel.js";
 import { extractMessage, isCommitCommand } from "./parse.js";
 
 const COMMIT_ACTIONS = [{ key: "r", label: "Reject" }];

@@ -20,7 +20,7 @@
  */
 
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
-import { registerPromptContributor } from "../../lib/prompt/index.js";
+import { registerPromptContributor } from "../../lib/prompt/coordinator.js";
 import { buildBindingRules } from "./rules.js";
 import { isInsideWorkTree } from "./scope.js";
 

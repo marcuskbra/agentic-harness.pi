@@ -8,13 +8,14 @@ import {
 	type DestructiveMatch,
 	detectDestructiveCommand,
 } from "@jitsusama/agentic-harness.core/guardian/history-gate";
+import { formatRedirectBlock } from "../../lib/guardian/redirect.js";
 import {
 	ALLOW,
 	type CommandGuardian,
-	formatRedirectBlock,
 	type GuardianResult,
-} from "../../lib/guardian/index.js";
-import { promptSingle, renderMarkdown } from "../../lib/ui/index.js";
+} from "../../lib/guardian/types.js";
+import { renderMarkdown } from "../../lib/ui/content-renderer.js";
+import { promptSingle } from "../../lib/ui/panel.js";
 
 const DESTRUCTIVE_ACTIONS = [{ key: "r", label: "Reject" }];
 

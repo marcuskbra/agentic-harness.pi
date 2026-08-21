@@ -26,7 +26,7 @@ import {
 	removeTreeFromQuest,
 	setPendingPrune,
 } from "../../../lib/internal/quest/trees.js";
-import type { QuestSession } from "../../../lib/quest/index.js";
+import type { QuestSession } from "../../../lib/quest/types.js";
 import { count, noun } from "../../../lib/ui/count.js";
 import { displayPath } from "../../../lib/ui/path.js";
 import { appendJourneyEntry, inventoryWorktrees } from "../lifecycle.js";

@@ -40,11 +40,11 @@ import {
 	shellSingleQuote,
 	switchQuest,
 } from "../../lib/internal/quest/session-registry.js";
-import type { QuestSession } from "../../lib/quest/index.js";
+import type { QuestSession } from "../../lib/quest/types.js";
 import {
 	getTypeProvider,
 	spawnTerminalSurface,
-} from "../../lib/terminal/index.js";
+} from "../../lib/terminal/resolve.js";
 
 /** Where the per-session records live. */
 export function sessionRegistryDir(): string {

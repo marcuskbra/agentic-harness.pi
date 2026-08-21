@@ -20,7 +20,7 @@ import {
 	unbackedDeclarations,
 } from "@jitsusama/agentic-harness.core/review";
 import { Type } from "@sinclair/typebox";
-import { displayPath } from "../../../lib/ui/index.js";
+import { displayPath } from "../../../lib/ui/path.js";
 import { attachments, reviewEngine } from "../engine.js";
 import { GLYPH } from "../render.js";
 import { treeStandingFor } from "../work.js";

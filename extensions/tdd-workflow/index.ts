@@ -20,7 +20,7 @@ import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { truncateToWidth } from "@earendil-works/pi-tui";
 import { attest } from "@jitsusama/agentic-harness.core/tdd";
 import { Type } from "@sinclair/typebox";
-import { drawInto } from "../../lib/ui/index.js";
+import { drawInto } from "../../lib/ui/tool-call.js";
 import { persist, restore, updateScoreboard } from "./lifecycle.js";
 import { formatTransitionReply } from "./reply.js";
 import { createTddState } from "./state.js";

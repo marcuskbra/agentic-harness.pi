@@ -31,7 +31,7 @@ import {
 import { webSearch as doSearch } from "@jitsusama/agentic-harness.core/web/search";
 import { Type } from "@sinclair/typebox";
 import { count } from "../../lib/ui/count.js";
-import { drawInto } from "../../lib/ui/index.js";
+import { drawInto } from "../../lib/ui/tool-call.js";
 import { formatManifest } from "./manifest.js";
 
 /** Details returned by web_read on success. */

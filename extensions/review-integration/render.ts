@@ -45,7 +45,7 @@ import {
 	describeAnchor,
 	standsAt,
 } from "@jitsusama/agentic-harness.core/review";
-import { detectProseViolations } from "../../lib/prose/index.js";
+import { detectProseViolations } from "../../lib/prose/detect.js";
 import {
 	languageFromPath,
 	renderCode,

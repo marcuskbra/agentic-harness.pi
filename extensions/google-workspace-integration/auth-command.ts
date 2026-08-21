@@ -16,7 +16,7 @@ import {
 } from "@jitsusama/agentic-harness.core/google/auth/oauth";
 import type { OAuth2Client } from "google-auth-library";
 import { authenticateWithFallback } from "../../lib/google/auth/dual-flow.js";
-import { view } from "../../lib/ui/index.js";
+import { view } from "../../lib/ui/panel.js";
 
 interface OAuthConfig {
 	clientId: string;

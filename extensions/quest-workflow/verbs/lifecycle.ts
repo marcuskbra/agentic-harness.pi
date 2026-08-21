@@ -22,22 +22,22 @@ import {
 	siblingRanks,
 } from "../../../lib/internal/quest/discovery.js";
 import { parseQuestFrontMatter } from "../../../lib/internal/quest/frontmatter.js";
+import { mintId } from "../../../lib/internal/quest/id.js";
 import { atomicWriteFile } from "../../../lib/internal/quest/io.js";
 import { nextRank } from "../../../lib/internal/quest/ranking.js";
 import { questIdForCwd } from "../../../lib/internal/quest/resolve-cwd.js";
+import { scaffoldQuestReadme } from "../../../lib/internal/quest/scaffold.js";
 import { formatRelativeAge } from "../../../lib/internal/quest/session-liveness.js";
 import { isSealedStatus } from "../../../lib/internal/quest/status.js";
 import { recordStructuralOp } from "../../../lib/internal/quest/structural-journal.js";
-import {
-	fetchUrlHints,
-	mintId,
-	type QuestAlias,
-	type QuestFrontMatter,
-	type QuestKind,
-	type QuestPriority,
-	scaffoldQuestReadme,
-} from "../../../lib/quest/index.js";
-import { parseRef, urlForRef } from "../../../lib/refs/index.js";
+import { fetchUrlHints } from "../../../lib/internal/quest/url-fetchers.js";
+import type {
+	QuestAlias,
+	QuestFrontMatter,
+	QuestKind,
+	QuestPriority,
+} from "../../../lib/quest/types.js";
+import { parseRef, urlForRef } from "../../../lib/refs/lookup.js";
 import { count } from "../../../lib/ui/count.js";
 import { displayPath } from "../../../lib/ui/path.js";
 import {

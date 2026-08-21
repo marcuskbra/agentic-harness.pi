@@ -24,7 +24,7 @@ import type {
 	QuestDoc,
 	QuestFrontMatter,
 } from "../../quest/types.js";
-import { parseAllRefs } from "../../refs/index.js";
+import { parseAllRefs } from "../../refs/lookup.js";
 import { parseQuestFrontMatter } from "./frontmatter.js";
 import { findIds, findIdsWithRelation, type IdMention } from "./id.js";
 

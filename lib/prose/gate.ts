@@ -9,7 +9,7 @@ import {
 	decideGate,
 	type GateDecision,
 	violationSignature,
-} from "../gate/index.js";
+} from "../gate/decision.js";
 import { formatProseBlock } from "./block.js";
 import type { ProseViolation } from "./detect.js";
 

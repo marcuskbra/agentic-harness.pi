@@ -15,12 +15,12 @@ import type {
 } from "@earendil-works/pi-coding-agent";
 import {
 	languageFromPath,
-	preHighlightCode,
 	renderCode,
 	renderDiff,
 	renderMarkdown,
-	view,
-} from "../../lib/ui/index.js";
+} from "../../lib/ui/content-renderer.js";
+import { preHighlightCode } from "../../lib/ui/index.js";
+import { view } from "../../lib/ui/panel.js";
 
 /** Content type for explicit rendering. */
 type ContentType = "markdown" | "diff" | "code";

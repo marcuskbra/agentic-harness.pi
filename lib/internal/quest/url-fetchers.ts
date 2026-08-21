@@ -16,7 +16,7 @@
 
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
-import type { Ref } from "../../refs/index.js";
+import type { Ref } from "../../refs/types.js";
 import {
 	sanitizeExcerpt,
 	sanitizeHandle,

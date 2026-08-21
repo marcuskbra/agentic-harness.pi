@@ -45,10 +45,10 @@ import {
 	runRecordFrom,
 } from "@jitsusama/agentic-harness.core/observability";
 import { Type } from "@sinclair/typebox";
-import { runInvestigation } from "../../lib/completion/index.js";
+import { runInvestigation } from "../../lib/completion/investigate.js";
 import { dataDir } from "../../lib/internal/paths.js";
 import { entriesToTurns } from "../../lib/internal/transcript.js";
-import { drawInto } from "../../lib/ui/index.js";
+import { drawInto } from "../../lib/ui/tool-call.js";
 
 /**
  * The runtime context fields the advisor uses that the older

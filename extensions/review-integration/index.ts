@@ -29,11 +29,9 @@ import {
 	type ReviewSubstrateApi,
 	registerReviewProvider,
 } from "@jitsusama/agentic-harness.core/review";
-import {
-	ReviewerArtifactsStore,
-	recoverReviewerRuns,
-} from "../../lib/subagent/index.js";
-import { count } from "../../lib/ui/index.js";
+import { ReviewerArtifactsStore } from "../../lib/subagent/artifacts.js";
+import { recoverReviewerRuns } from "../../lib/subagent/recovery.js";
+import { count } from "../../lib/ui/count.js";
 import {
 	attachmentDir,
 	forgetReviewEngine,

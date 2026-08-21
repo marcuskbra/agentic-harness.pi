@@ -32,7 +32,7 @@ import {
 	drawInto,
 	type RenderTheme,
 	renderToolCall,
-} from "../../lib/ui/index.js";
+} from "../../lib/ui/tool-call.js";
 import type { BrowserDetails } from "./result.js";
 
 /**

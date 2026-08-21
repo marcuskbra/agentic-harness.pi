@@ -21,13 +21,13 @@ import {
 	indexSessionFiles,
 	type LivenessSnapshot,
 } from "../../lib/internal/quest/session-liveness.js";
-import type { QuestSession } from "../../lib/quest/index.js";
+import type { QuestSession } from "../../lib/quest/types.js";
+import { getLivenessProvider } from "../../lib/terminal/resolve.js";
 import {
-	getLivenessProvider,
 	type TerminalProbe,
 	type TerminalSessionHandle,
 	terminalHandleKey,
-} from "../../lib/terminal/index.js";
+} from "../../lib/terminal/types.js";
 
 /** How long to wait on one driver's batched terminal probe before giving up. */
 const TERMINAL_PROBE_TIMEOUT_MS = 2000;

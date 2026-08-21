@@ -20,7 +20,7 @@ import {
 	setCredentials,
 } from "@jitsusama/agentic-harness.core/google/auth/oauth";
 import type { OAuth2Client } from "google-auth-library";
-import { promptSingle } from "../../ui/index.js";
+import { promptSingle } from "../../ui/panel.js";
 import { authenticateWithFallback } from "./dual-flow.js";
 import { ensureOAuthApp } from "./setup-wizard.js";
 

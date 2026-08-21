@@ -29,12 +29,12 @@ import {
 	type Turn,
 } from "@jitsusama/agentic-harness.core/governance";
 import { Type } from "@sinclair/typebox";
-import { runSideCompletion } from "../../lib/completion/index.js";
+import { runSideCompletion } from "../../lib/completion/side.js";
 import { dataDir } from "../../lib/internal/paths.js";
 import { entriesToTurns } from "../../lib/internal/transcript.js";
-import { registerPromptContributor } from "../../lib/prompt/index.js";
+import { registerPromptContributor } from "../../lib/prompt/coordinator.js";
 import { count } from "../../lib/ui/count.js";
-import { drawInto } from "../../lib/ui/index.js";
+import { drawInto } from "../../lib/ui/tool-call.js";
 
 /** Captured lessons sit just below the enforced conventions. */
 const GOVERNANCE_ORDER = 1;

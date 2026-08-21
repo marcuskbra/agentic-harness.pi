@@ -38,7 +38,7 @@ import {
 	createGitStacks,
 } from "@jitsusama/agentic-harness.core/work";
 import { Type } from "@sinclair/typebox";
-import { count } from "../../../lib/ui/index.js";
+import { count } from "../../../lib/ui/count.js";
 import { attachments } from "../engine.js";
 import { confirmWrite } from "../gate.js";
 import { type GatePanel, GLYPH, proposalLine } from "../render.js";

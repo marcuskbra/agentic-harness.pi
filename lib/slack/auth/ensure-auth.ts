@@ -24,7 +24,7 @@ import {
 	exchangeCodeForToken,
 } from "@jitsusama/agentic-harness.core/slack/auth/oauth";
 import { waitForOAuthCallback } from "@jitsusama/agentic-harness.core/slack/auth/server";
-import { view } from "../../ui/index.js";
+import { view } from "../../ui/panel.js";
 import { ensureSetup } from "./setup-wizard.js";
 
 /**

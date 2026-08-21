@@ -35,7 +35,8 @@ import {
 	type Verdict,
 } from "@jitsusama/agentic-harness.core/review";
 import { Type } from "@sinclair/typebox";
-import { count, displayPath } from "../../../lib/ui/index.js";
+import { count } from "../../../lib/ui/count.js";
+import { displayPath } from "../../../lib/ui/path.js";
 import {
 	decisionDir,
 	draftDir,

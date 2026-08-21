@@ -29,7 +29,8 @@ import {
 	renderMermaid,
 } from "@jitsusama/agentic-harness.core/web/mermaid";
 import { Type } from "@sinclair/typebox";
-import { drawInto, firstText } from "../../lib/ui/index.js";
+import { drawInto } from "../../lib/ui/tool-call.js";
+import { firstText } from "../../lib/ui/tool-result.js";
 
 /** The platform command that opens a file in its default app. */
 function osOpenCommand(): { command: string; args: string[] } | null {

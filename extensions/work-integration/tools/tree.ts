@@ -48,7 +48,8 @@ import {
 import { Type } from "@sinclair/typebox";
 import { sessionGateDeps } from "../../../lib/internal/gate/session-deps.js";
 import { gitTreeRootOf } from "../../../lib/internal/quest/git-signals.js";
-import { count, displayPath } from "../../../lib/ui/index.js";
+import { count } from "../../../lib/ui/count.js";
+import { displayPath } from "../../../lib/ui/path.js";
 import { execFor, objectionsTo, treeBroker } from "../broker.js";
 import { GLYPH, treeLine } from "../render.js";
 import {
