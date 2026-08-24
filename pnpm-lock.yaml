@@ -12,7 +12,7 @@ importers:
   .:
     dependencies:
       '@jitsusama/agentic-harness.core':
-        specifier: github:marcuskbra/agentic-harness.core#007b8a5e85e3b86f926f499a7b40ab61b6f7b44c
+        specifier: github:marcuskbra/agentic-harness.core#main
         version: https://codeload.github.com/marcuskbra/agentic-harness.core/tar.gz/007b8a5e85e3b86f926f499a7b40ab61b6f7b44c(yauzl@2.10.0)
       '@modelcontextprotocol/sdk':
         specifier: ^1.29.0
