@@ -45,7 +45,7 @@ import {
 	runRecordFrom,
 } from "@jitsusama/agentic-harness.core/observability";
 import { Type } from "@sinclair/typebox";
-import { runInvestigation } from "../../lib/completion/investigate.js";
+import { runInvestigation } from "../../lib/completion/index.js";
 import { dataDir } from "../../lib/internal/paths.js";
 import { entriesToTurns } from "../../lib/internal/transcript.js";
 import { drawInto } from "../../lib/ui/tool-call.js";

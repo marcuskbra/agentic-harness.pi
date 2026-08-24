@@ -14,8 +14,8 @@
  * would catch the same thing far more slowly and only there.
  */
 
-import { readdirSync, readFileSync, statSync } from "node:fs";
-import { join } from "node:path";
+import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
+import { dirname, join, resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 
 const root = new URL("../..", import.meta.url).pathname;
@@ -108,15 +108,22 @@ function sourceFiles(dir: string): string[] {
  * inline `import { type X }` form still counts, since the
  * statement itself survives.
  */
-function runtimeImport(line: string): string | undefined {
+function importedSpecifier(line: string): string | undefined {
 	if (/^\s*import\s+type\s/.test(line)) return undefined;
 	const match =
 		/^\s*(?:import|export)[^"']*from\s*["']([^"']+)["']/.exec(line) ??
 		/^\s*import\s*["']([^"']+)["']/.exec(line) ??
 		/\brequire\(\s*["']([^"']+)["']\s*\)/.exec(line);
-	const specifier = match?.[1];
-	if (!specifier) return undefined;
-	if (specifier.startsWith(".") || specifier.startsWith("node:")) {
+	return match?.[1];
+}
+
+function runtimeImport(line: string): string | undefined {
+	const specifier = importedSpecifier(line);
+	if (
+		!specifier ||
+		specifier.startsWith(".") ||
+		specifier.startsWith("node:")
+	) {
 		return undefined;
 	}
 	// A subpath import still comes from its package: pngjs/browser
@@ -125,6 +132,16 @@ function runtimeImport(line: string): string | undefined {
 	return specifier.startsWith("@")
 		? parts.slice(0, 2).join("/")
 		: (parts[0] ?? specifier);
+}
+
+function relativeRuntimeImport(line: string): string | undefined {
+	const specifier = importedSpecifier(line);
+	return specifier?.startsWith(".") ? specifier : undefined;
+}
+
+function sourcePath(file: string, specifier: string): string {
+	const target = resolve(dirname(file), specifier);
+	return target.endsWith(".js") ? `${target.slice(0, -3)}.ts` : target;
 }
 
 describe("what ships can load", () => {
@@ -159,6 +176,17 @@ describe("what ships can load", () => {
 		// Without this, a broken scanner reports a clean package.
 		expect(imported.has("puppeteer-core")).toBe(true);
 		expect(imported.size).toBeGreaterThan(3);
+	});
+
+	it("keeps extension runtime imports resolvable", () => {
+		const missing = sourceFiles(join(root, "extensions")).flatMap((file) =>
+			importStatements(readFileSync(file, "utf8")).flatMap((statement) => {
+				const specifier = relativeRuntimeImport(statement);
+				if (!specifier || existsSync(sourcePath(file, specifier))) return [];
+				return [`${file.slice(root.length)} -> ${specifier}`];
+			}),
+		);
+		expect(missing).toEqual([]);
 	});
 
 	it("declares every package it imports as a dependency", () => {

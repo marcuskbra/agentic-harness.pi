@@ -50,7 +50,7 @@
 		]
 	},
 	"dependencies": {
-		"@jitsusama/agentic-harness.core": "github:marcuskbra/agentic-harness.core#a8a4affcab3663662dee76c9f8dff7a8cfcf99da",
+		"@jitsusama/agentic-harness.core": "github:marcuskbra/agentic-harness.core#007b8a5e85e3b86f926f499a7b40ab61b6f7b44c",
 		"@modelcontextprotocol/sdk": "^1.29.0",
 		"google-auth-library": "^10.9.0",
 		"googleapis": "^173.0.0",

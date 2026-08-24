@@ -29,7 +29,7 @@ import {
 	type Turn,
 } from "@jitsusama/agentic-harness.core/governance";
 import { Type } from "@sinclair/typebox";
-import { runSideCompletion } from "../../lib/completion/side.js";
+import { runSideCompletion } from "../../lib/completion/index.js";
 import { dataDir } from "../../lib/internal/paths.js";
 import { entriesToTurns } from "../../lib/internal/transcript.js";
 import { registerPromptContributor } from "../../lib/prompt/coordinator.js";
