@@ -22,6 +22,9 @@
  */
 const STARTUP_INSTALL_KEY = Symbol.for("pi.subagent.startupPiInstall");
 
+// A Pi self-update can delete the versioned directory the parent exported.
+delete process.env.PI_PACKAGE_DIR;
+
 (globalThis as Record<symbol, unknown>)[STARTUP_INSTALL_KEY] = {
 	node: process.execPath,
 	entry: process.execPath,
